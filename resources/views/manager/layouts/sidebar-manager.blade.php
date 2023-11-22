@@ -24,7 +24,7 @@
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-
+                            Menu
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -32,25 +32,25 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <i class="far fa-user nav-icon"></i>
-                                <p></p>
+                                <p>Data Client</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="fa fa-cash-register nav-icon"></i>
-                                <p></p>
+                                <p>Data Kasir</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="fa fa-utensils nav-icon"></i>
-                                <p></p>
+                                <p>Data Produk</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="fa fa-book nav-icon"></i>
-                                <p></p>
+                                <p>Laporan</p>
                             </a>
                         </li>
                     </ul>
