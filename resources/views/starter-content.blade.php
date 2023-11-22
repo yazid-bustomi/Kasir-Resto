@@ -1,4 +1,4 @@
-@extends('manager.layouts.master')
+@extends('../layouts.master')
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->

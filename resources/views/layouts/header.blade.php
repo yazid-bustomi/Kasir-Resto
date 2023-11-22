@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{ asset ('asset/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset ('asset/dist/css/adminlte.min.css') }}">
+    {{-- my style --}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body class="hold-transition  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">

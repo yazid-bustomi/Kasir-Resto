@@ -1,7 +1,7 @@
 @include('layouts.header')
 <div class="wrapper">
 
-    @include('layouts.navbar')
+    @include('manager.layouts.navbar-manager')
     @include('manager.layouts.sidebar-manager')
 
 
