@@ -1,33 +1,43 @@
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
-    <div class="p-3">
-        <h5>Title</h5>
-        <p>Sidebar content</p>
-    </div>
 </aside>
 <!-- /.control-sidebar -->
 
 <!-- Main Footer -->
 <footer class="main-footer">
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-        Anything you want
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.2.0
     </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
 </footer>
 </div>
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
 <!-- jQuery -->
 <script src="{{ asset('asset/plugins/jquery/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
+<!-- Bootstrap -->
 <script src="{{ asset('asset/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ asset('asset/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('asset/dist/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('asset/dist/js/adminlte.js') }}"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="{{ asset('asset/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
+<script src="{{ asset('asset/plugins/raphael/raphael.min.js') }}"></script>
+<script src="{{ asset('asset/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
+<script src="{{ asset('asset/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ asset('asset/plugins/chart.js/Chart.min.js') }}"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="{{ asset('asset/dist/js/demo.js') }}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ asset('asset/dist/js/pages/dashboard2.js') }}"></script>
 </body>
 
 </html>
