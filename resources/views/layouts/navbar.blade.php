@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- Fontfaces CSS-->
 <link href="css/font-face.css" rel="stylesheet" media="all">
 <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
@@ -15,6 +16,22 @@
 <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
 <!-- Main CSS-->
 <link href="css/theme.css" rel="stylesheet" media="all">
+=======
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="index3.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Contact</a>
+        </li>
+    </ul>
+>>>>>>> 461dddf7a5197225f7fe9f6a6d3fe7e55badfed3
 
 <div class="header-mobile__bar">
     <div class="container-fluid">
@@ -47,10 +64,29 @@
                 <a href="table.html">
                     <i class="fas fa-table"></i>Tables
                 </a>
+<<<<<<< HEAD
             </li>
             <li>
                 <a href="form.html">
                     <i class="far fa-check-square"></i>Forms
+=======
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+            </div>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="far fa-bell"></i>
+                <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <span class="dropdown-item dropdown-header">15 Notifications</span>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-envelope mr-2"></i> 4 new messages
+                    <span class="float-right text-muted text-sm">3 mins</span>
+>>>>>>> 461dddf7a5197225f7fe9f6a6d3fe7e55badfed3
                 </a>
             </li>
             <li>
