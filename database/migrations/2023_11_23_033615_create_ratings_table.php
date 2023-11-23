@@ -13,7 +13,7 @@ class CreateRatingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ratings', function (Blueprint $table) {
+        Schema::create('tbl_ratings', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });

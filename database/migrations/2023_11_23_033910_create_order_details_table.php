@@ -13,8 +13,13 @@ class CreateOrderDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('order_details', function (Blueprint $table) {
+        Schema::create('tbl_order_details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('paket_id')->references('id')->on('tbl_produks');
+            $table->foreignId('order_id')->references('id')->on('tbl_orders');
+            $table->integer('jumlah');
+            $table->integer('harga');
+            $table->integer('total_harga');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateOrderDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_details');
+        Schema::dropIfExists('tbl_order_details');
     }
 }
