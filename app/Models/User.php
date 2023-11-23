@@ -32,6 +32,7 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
+    // rating hanya bbisa di miliki 1 users
     public function rating(){
         return $this->hasMany(Rating::class);
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use index;
 use App\Models\Order;
 use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
@@ -15,7 +16,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        // menampilkan list yang order
+        $orders = Order::all();
+        return view('order.index', ['orders' => $orders]); 
     }
 
     /**
