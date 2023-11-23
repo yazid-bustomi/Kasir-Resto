@@ -32,8 +32,16 @@ class UserSeeder extends Seeder
         ]);
 
         $client = User::create([
-            'name' => 'client',
-            'email' => 'client@gmail.com',
+            'name' => 'client1',
+            'email' => 'client1@gmail.com',
+            'password' => bcrypt('12345678'),
+            'phone' => '080',
+            'role' => 'client'
+        ]);
+
+        $client2 = User::create([
+            'name' => 'client2',
+            'email' => 'client2@gmail.com',
             'password' => bcrypt('12345678'),
             'phone' => '080',
             'role' => 'client'
