@@ -15,6 +15,11 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('tbl_orders', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->references('id')->on('tbl_users');
+            $table->integer('no_order')->nullable();
+            $table->integer('bayar')->nullable();
+            $table->integer('total_bayar')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }
