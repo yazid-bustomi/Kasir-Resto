@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -14,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// route manager 
+Route::get('/manager', [ManagerController::class, 'index'])->name('manager');
 
 Route::get('/', function () {
-    return view('manager.Dashboard-manager');
+    return view('home');
 });
 
 Auth::routes();
