@@ -35,6 +35,14 @@
                                 <p>Data Client</p>
                             </a>
                         </li>
+
+                        <li class="nav-item pl-2 mr-2">
+                            <a href="{{ route('order.index') }}" class="nav-link ">
+                                <i class="fa fa-shopping-cart nav-icon"></i>
+                                <p>Data Order</p>
+                            </a>
+                        </li>
+
                         <li class="nav-item pl-2 mr-2">
                             <a href="{{ route('data-cashiers') }}" class="nav-link">
                                 <i class="fa fa-cash-register nav-icon"></i>
