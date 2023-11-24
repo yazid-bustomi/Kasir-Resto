@@ -50,16 +50,22 @@
                             </a>
                         </li>
 
-                        <li class="nav-item pl-2 mr-2">
+                        {{-- <li class="nav-item pl-2 mr-2">
                             <a href="{{ route('data-cashiers') }}" class="nav-link">
                                 <i class="fa fa-cash-register nav-icon"></i>
                                 <p>Data Kasir</p>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item pl-2 mr-2">
-                            <a href="{{ route('data-products') }}" class="nav-link">
+                            <a href="{{ route('data.products') }}" class="nav-link">
                                 <i class="fa fa-utensils nav-icon"></i>
                                 <p>Data Produk</p>
+                            </a>
+                        </li>
+                        <li class="nav-item pl-2 mr-2">
+                            <a href="{{ route('rating.index') }}" class="nav-link">
+                                <i class="fa fa-star nav-icon"></i>
+                                <p>Data Rating</p>
                             </a>
                         </li>
                         <li class="nav-item pl-2 mr-2">
