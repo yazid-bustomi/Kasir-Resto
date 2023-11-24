@@ -36,7 +36,7 @@
 <script src="{{ asset('asset/dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('asset/dist/js/pages/dashboard2.js') }}"></script>
-
+@yield('javascript')
 </body>
 
 </html>
