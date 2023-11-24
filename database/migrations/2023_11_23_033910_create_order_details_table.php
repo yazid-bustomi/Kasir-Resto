@@ -14,9 +14,9 @@ class CreateOrderDetailsTable extends Migration
     public function up()
     {
         Schema::create('tbl_order_details', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('paket_id')->references('id')->on('tbl_produks');
-            $table->foreignId('order_id')->references('id')->on('tbl_orders');
+            $table->id('id_order_details');
+            $table->foreignId('paket_id')->references('id_produks')->on('tbl_produks');
+            $table->foreignId('order_id')->references('id_orders')->on('tbl_orders');
             $table->integer('jumlah');
             $table->integer('harga');
             $table->integer('total_harga');

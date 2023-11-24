@@ -14,7 +14,7 @@ class CreateProduksTable extends Migration
     public function up()
     {
         Schema::create('tbl_produks', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_produks');
             $table->timestamps();
         });
     }
