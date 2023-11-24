@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 // route manager 
 Route::get('/manager', [ManagerController::class, 'index'])->name('manager');
+Route::get('/manager/data-clients', [ManagerController::class, 'dataClients'])->name('data-clients');
+Route::get('/manager/data-cashiers', [ManagerController::class, 'dataCashiers'])->name('data-cashiers');
+Route::get('/manager/data-products', [ManagerController::class, 'dataProducts'])->name('data-products');
+Route::get('/manager/reports', [ManagerController::class, 'reports'])->name('reports');
 
 
 Route::get('/', function () {

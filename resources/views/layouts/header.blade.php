@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset ('asset/dist/css/adminlte.min.css') }}">
     {{-- my style --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    @yield('css')
 </head>
 
 <body class="hold-transition  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
