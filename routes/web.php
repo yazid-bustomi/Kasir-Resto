@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // route manager 
 Route::get('/manager', [ManagerController::class, 'index'])->name('manager');
 
+
 Route::get('/', function () {
     return view('home');
 });
