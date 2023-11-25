@@ -21,16 +21,23 @@
                 <!-- Add icons to the links using the .nav-icon class
                        with font-awesome or any other icon font library -->
                 <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
+                    {{-- <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Menu
                             <i class="right fas fa-angle-left"></i>
                         </p>
-                    </a>
+                    </a> --}}
                     <ul class="nav nav-treeview">
                         <li class="nav-item pl-2 mr-2">
-                            <a href="{{ route('data-clients') }}" class="nav-link ">
+                            <a href="{{ route('manager.index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item pl-2 mr-2">
+                            <a href="{{ route('data.clients') }}" class="nav-link ">
                                 <i class="far fa-user nav-icon"></i>
                                 <p>Data Client</p>
                             </a>
@@ -43,16 +50,22 @@
                             </a>
                         </li>
 
-                        <li class="nav-item pl-2 mr-2">
+                        {{-- <li class="nav-item pl-2 mr-2">
                             <a href="{{ route('data-cashiers') }}" class="nav-link">
                                 <i class="fa fa-cash-register nav-icon"></i>
                                 <p>Data Kasir</p>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item pl-2 mr-2">
-                            <a href="{{ route('data-products') }}" class="nav-link">
+                            <a href="{{ route('data.products') }}" class="nav-link">
                                 <i class="fa fa-utensils nav-icon"></i>
                                 <p>Data Produk</p>
+                            </a>
+                        </li>
+                        <li class="nav-item pl-2 mr-2">
+                            <a href="{{ route('rating.index') }}" class="nav-link">
+                                <i class="fa fa-star nav-icon"></i>
+                                <p>Data Rating</p>
                             </a>
                         </li>
                         <li class="nav-item pl-2 mr-2">

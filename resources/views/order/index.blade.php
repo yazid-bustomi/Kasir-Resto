@@ -24,7 +24,7 @@
         <div class="container-fluid">
             <div class="container">
                 {{-- this content --}}
-                <a class="btn btn-info mb-3" href="{{ route('manager') }}"><i class="fa fa-arrow-left"></i></a>
+                <a class="btn btn-info mb-3" href="{{ route('manager.index') }}"><i class="fa fa-arrow-left"></i></a>
                 <table class="table table-hover" id="data-tabel">
                     <thead>
                         <tr>
