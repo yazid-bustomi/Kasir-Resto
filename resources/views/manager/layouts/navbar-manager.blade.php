@@ -8,7 +8,7 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a class="nav-link" href="#">
                 <i class="fa fa-user pr-1"></i>
-                <span> Selamat Datang, nama !</span>
+                <span> Selamat Datang, {{ Auth::user('name') }}</span>
             </a>
         </li>
 
