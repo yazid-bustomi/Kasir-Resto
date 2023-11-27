@@ -3,8 +3,12 @@
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RatingController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\UserControllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Requests;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +32,8 @@ Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/user',[App\Http\Controllers\Auth\UserController::class, 'index'])->name('user');
+Route::post('/add_cart',[App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
