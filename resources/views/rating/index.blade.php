@@ -7,12 +7,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Order</h1>
+                    <h1 class="m-0">Rating</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Order</li>
+                        <li class="breadcrumb-item active">Rating</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -42,14 +42,11 @@
                         @php
                             $no = 1;
                         @endphp
-                        @foreach ($orders as $order)
+                        @foreach ($ratings as $rating)
                             <tr>
                                 <td>{{ $no++ }}</td>
-                                <td>{{ $order->user_id }}</td>
-                                <td>{{ $order->no_order }}</td>
-                                <td>{{ $order->bayar }}</td>
-                                <td>{{ $order->total_bayar }}</td>
-                                <td>{{ $order->status }}</td>
+                                <td>{{ $rating }}</td>
+                              
                                 <td>
                                     {{-- <a href="{{ route('order.edit', $order->id) }}">
                                         Edit</a>
