@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\RatingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +16,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// route manager 
+Route::get('/manager', [ManagerController::class, 'index'])->name('manager.index');
+Route::get('/manager/data-clients', [ManagerController::class, 'dataClients'])->name('data.clients');
+Route::get('/manager/data-cashiers', [ManagerController::class, 'dataCashiers'])->name('data.cashiers');
+Route::get('/manager/data-products', [ManagerController::class, 'dataProducts'])->name('data.products');
+Route::get('/manager/reports', [ManagerController::class, 'reports'])->name('reports');
+
+Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 
 Route::get('/', function () {
-    return view('manager.Dashboard-manager');
+    return view('home');
 });
 
 Auth::routes();

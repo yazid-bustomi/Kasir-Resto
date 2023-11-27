@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Rating;
 use Illuminate\Http\Request;
 
-class RatingController extends Controller
+class ProdukKategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class RatingController extends Controller
      */
     public function index()
     {
-        $ratings = Rating::all();
-        return view('rating.index', ['ratings' => $ratings]);
+        //
     }
 
     /**
