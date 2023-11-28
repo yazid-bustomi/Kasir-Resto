@@ -8,7 +8,7 @@ class ManagerController extends Controller
 {
     public function index()
     {
-        return view('manager.Dashboard-manager');
+        return view('manager.dashboard-manager');
     }
     public function dataClients()
     {
