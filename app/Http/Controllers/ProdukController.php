@@ -44,37 +44,37 @@ class ProdukController extends Controller
     {
 
         // Mengelola file gambar_produks
-        $fileName = null;
-        if ($request->hasFile('gambar_produks')) {
-            $file = $request->file('gambar_produks');
-            $fileName = time() . '_' . $file->getClientOriginalExtension();
-            $file->storeAs('public/img/uploads', $fileName);
-        }
+        // $fileName = null;
+        // if ($request->hasFile('gambar_produks')) {
+        //     $file = $request->file('gambar_produks');
+        //     $fileName = time() . '_' . $file->getClientOriginalExtension();
+        //     $file->storeAs('public/img/uploads', $fileName);
+        // }
 
         // Validasi data
-        $validatedData = \validator($request->all(), [
-            'kode_produks' => 'required|string|max:255',
-            'nama_produks' => 'required|string|max:255',
-            'kategori_produks' => 'required|string',
-            'stok_produks' => 'required|string',
-            'harga_produks' => 'required|string|max:255',
-            'gambar_produks' => 'image|mimes:png,jpeg,jpg,gif,svg|max:2048',
-            'deskripsi_produks' => 'required|string|max:255',
-        ])->validate();
+        // $validatedData = \validator($request->all(), [
+        //     'kode_produks' => 'required|string|max:255',
+        //     'nama_produks' => 'required|string|max:255',
+        //     'kategori_produks' => 'required|string',
+        //     'stok_produks' => 'required|string',
+        //     'harga_produks' => 'required|string|max:255',
+        //     'gambar_produks' => 'image|mimes:png,jpeg,jpg,gif,svg|max:2048',
+        //     'deskripsi_produks' => 'required|string|max:255',
+        // ])->validate();
         // Simpan ke database
-        $produk = new Produk([
-            'kode_produks' => $validatedData['kode_produks'],
-            'nama_produks' => $validatedData['nama_produks'],
-            'kategori_produks' => $validatedData['kategori_produks'],
-            'stok_produks' => $validatedData['stok_produks'],
-            'harga_produks' => $validatedData['harga_produks'],
-            'gambar_produks' => $fileName,
-            'deskripsi_produks' => $validatedData['deskripsi_produks'],
-        ]);
-        \var_dump($produk);
-        $produk->save();
+        // $produk = new Produk([
+        //     'kode_produks' => $validatedData['kode_produks'],
+        //     'nama_produks' => $validatedData['nama_produks'],
+        //     'kategori_produks' => $validatedData['kategori_produks'],
+        //     'stok_produks' => $validatedData['stok_produks'],
+        //     'harga_produks' => $validatedData['harga_produks'],
+        //     'gambar_produks' => $fileName,
+        //     'deskripsi_produks' => $validatedData['deskripsi_produks'],
+        // ]);
+        // \var_dump($produk);
+        // $produk->save();
 
-        return redirect(route('data.products'))->with('success', 'Produk berhasil ditambahkan');
+        // return redirect(route('data.products'))->with('success', 'Produk berhasil ditambahkan');
     }
 
     /**
