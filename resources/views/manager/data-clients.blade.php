@@ -48,20 +48,35 @@
                     <thead>
                         <tr>
                             <th>No </th>
-                            <th>Gambar</th>
                             <th>Nama</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Role</th>
                             <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><img src="" alt="gambar"></td>
-                            <td>Meja-01</td>
+                            <td>Manajer</td>
+                            <td>manajer@gmail.com</td>
+                            <td>000000</td>
+                            <td>manajer</td>
                             <td class="text-center">
                                 <button class="btn btn-success mr-5" href="">edit</button>
                                 <button class="btn btn-danger " href="">delete</button>
 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Kasir</td>
+                            <td>kasir@gmail.com</td>
+                            <td>08080808</td>
+                            <td>kasir</td>
+                            <td class="text-center">
+                                <button class="btn btn-success mr-5" href="">edit</button>
+                                <button class="btn btn-danger " href="">delete</button>
                             </td>
                         </tr>
                     </tbody>

@@ -1,4 +1,22 @@
 @extends('manager/layouts.master')
+
+@section('css')
+{{--
+<link rel="stylesheet" href="{{ asset('asset/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}"> --}}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+@endsection
+
+@section('javascript')
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(function() {
+    $('#data-tabel').DataTable();
+    });
+</script>
+@endsection
+
 @section('content')
 
 <div class="content-wrapper">
@@ -24,43 +42,53 @@
         <div class="container-fluid">
             <div class="container">
                 {{-- this content --}}
-                <a class="btn btn-info mb-3" href="{{ route('manager.index') }}"><i class="fa fa-arrow-left"></i></a>
-                <table class="table table-hover" id="data-tabel">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>User ID</th>
-                            <th>No Order</th>
-                            <th>Bayar</th>
-                            <th>Total Bayar</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                    <div class="card">
+                        <div class="card-header text-left">
+                            <a class="btn btn-info mb-3" href="{{ route('manager.index') }}" role="button">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                            <a class="btn btn-info mb-3" href="" role="button">
+                                + RATING
+                            </a>
 
-                    <tbody>
-                        @php
-                            $no = 1;
-                        @endphp
-                        @foreach ($ratings as $rating)
-                            <tr>
-                                <td>{{ $no++ }}</td>
-                                <td>{{ $rating }}</td>
-                              
-                                <td>
-                                    {{-- <a href="{{ route('order.edit', $order->id) }}">
-                                        Edit</a>
-                                    <a href="{{ route('order.delete', $order->id) }}">
-                                        Delete</a> --}}
-                                        Bayar
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+                        </div>
+                        
+                            <div class="card-body">
+                                <table class="table table-hover table-bordered text-center" id="data-tabel">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>NAME</th>
+                                            <th>RATING</th>
+                                            <th>REVIEW</th>
+                                            <th>TANGGAL</th>
+                                            <th>AKTIVITAS</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @php
+                                            $no = 1;
+                                        @endphp
+                                        @foreach ($ratings as $rating)
+                                            <tr>
+                                                <td>{{ $no++ }}</td>
+                                                <td>{{ $rating->user_name }}</td>
+                                                <td>{{ $rating->user_rating }}</td>
+                                                <td>{{ $rating->user_review }}</td>
+                                                <td>{{ $rating->datetime }}</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                                    <a href="#" class="btn btn-danger btn-sm">Delete</a> 
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                         </div>
+                    </div>
+             </div>
         </div>
-
     </section>
 </div>
 

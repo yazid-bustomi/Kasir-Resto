@@ -1,4 +1,21 @@
 @extends('manager/layouts.master')
+@section('css')
+{{--
+<link rel="stylesheet" href="{{ asset('asset/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}"> --}}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+@endsection
+
+@section('javascript')
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(function() {
+    $('#data-tabel').DataTable();
+    });
+</script>
+@endsection
+
 @section('content')
 
 <div class="content-wrapper">
@@ -23,13 +40,13 @@
     <section class="content mt-4">
         <div class="container-fluid">
             <div class="container">
-                {{-- this content --}}
+                {{-- this cozntent --}}
                 <a class="btn btn-info mb-3" href="{{ route('manager.index') }}"><i class="fa fa-arrow-left"></i></a>
                 <table class="table table-hover" id="data-tabel">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>User ID</th>
+                            <th>Nama</th>
                             <th>No Order</th>
                             <th>Bayar</th>
                             <th>Total Bayar</th>
@@ -50,12 +67,15 @@
                                 <td>{{ $order->bayar }}</td>
                                 <td>{{ $order->total_bayar }}</td>
                                 <td>{{ $order->status }}</td>
-                                <td>
+                                
+                                <td class="text-center">
+                                        <button class="btn btn-success mr-5" href="">edit</button>
+                                        <button class="btn btn-danger " href="">delete</button>
+        
                                     {{-- <a href="{{ route('order.edit', $order->id) }}">
                                         Edit</a>
                                     <a href="{{ route('order.delete', $order->id) }}">
                                         Delete</a> --}}
-                                        Bayar
                                 </td>
                             </tr>
                         @endforeach
