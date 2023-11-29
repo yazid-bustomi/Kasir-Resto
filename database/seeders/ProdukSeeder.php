@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Produk;
 use Illuminate\Database\Seeder;
-use DB;
+use Illuminate\Support\Facades\DB;
 class ProdukSeeder extends Seeder
 {
     /**
@@ -14,7 +14,9 @@ class ProdukSeeder extends Seeder
      */
     public function run()
     {
-        $data = [
+        DB::table('tbl_produks')->insert(
+
+         [
             [
                 'nama_produks' => 'Garang Gesing Panna Cotta',
                 'kode_produks' => 'GGPC',
@@ -451,8 +453,6 @@ class ProdukSeeder extends Seeder
                 'deskripsi_produks' => 'Crispy chicken wings honey BBQ with bell pepper aioli sauce',
                 'gambar_produks' => '48.jpg',
             ],
-        ];
-
-       
+        ]);     
     }
 }
