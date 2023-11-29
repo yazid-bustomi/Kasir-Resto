@@ -17,6 +17,7 @@ class CreateProdukKategoriesTable extends Migration
             $table->id('id_produk_kategories');
             $table->string('nama_kategori');
             $table->string('keterangan');
+            $table->enum('nama_kategori', ['makanan', 'minuman', 'cemilan']);
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ class CreateRatingsTable extends Migration
             $table->id('id_ratings');
             $table->integer('rating');
             $table->foreignId('user_id')->references('id_users')->on('tbl_users');
-            $table->date('date');
+            $table->integer('datetime');
             $table->timestamps();
         });
     }
