@@ -29,7 +29,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>User ID</th>
+                            <th>Nama</th>
                             <th>No Order</th>
                             <th>Bayar</th>
                             <th>Total Bayar</th>
