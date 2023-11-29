@@ -46,5 +46,8 @@ class UserSeeder extends Seeder
             'phone' => '080',
             'role' => 'client'
         ]);
+        $this->call([
+            OrderSeeder::class
+        ]);
     }
 }
