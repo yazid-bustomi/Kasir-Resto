@@ -18,10 +18,6 @@ class ManagerController extends Controller
     {
         return view('manager.data-cashiers');
     }
-    public function dataProducts()
-    {
-        return view('manager.data-products');
-    }
     public function reports()
     {
         return view('manager.reports');
