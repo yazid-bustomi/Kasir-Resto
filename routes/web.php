@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\UserControllers;
@@ -26,8 +27,11 @@ Route::get('/manager/data-clients', [ManagerController::class, 'dataClients'])->
 Route::get('/manager/data-cashiers', [ManagerController::class, 'dataCashiers'])->name('data.cashiers');
 Route::get('/manager/data-products', [ManagerController::class, 'dataProducts'])->name('data.products');
 Route::get('/manager/reports', [ManagerController::class, 'reports'])->name('reports');
-
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
+
+// CRUD produk
+Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formTambah-produk');
+Route::post('/manager/store', [ProdukController::class, 'store'])->name('store');
 
 Route::get('/', function () {
     return view('home');

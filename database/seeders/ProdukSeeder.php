@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Produk;
 use Illuminate\Database\Seeder;
 use DB;
 class ProdukSeeder extends Seeder
@@ -452,6 +453,6 @@ class ProdukSeeder extends Seeder
             ],
         ];
 
-        DB::table('tbl_produks')->insert($data);
+       
     }
 }
