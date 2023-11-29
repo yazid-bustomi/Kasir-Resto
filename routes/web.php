@@ -25,7 +25,7 @@ use App\Http\Requests;
 Route::get('/manager', [ManagerController::class, 'index'])->name('manager.index');
 Route::get('/manager/data-clients', [ManagerController::class, 'dataClients'])->name('data.clients');
 Route::get('/manager/data-cashiers', [ManagerController::class, 'dataCashiers'])->name('data.cashiers');
-Route::get('/manager/data-products', [ManagerController::class, 'dataProducts'])->name('data.products');
+Route::get('/manager/data-products', [ProdukController::class, 'index'])->name('data.products');
 Route::get('/manager/reports', [ManagerController::class, 'reports'])->name('reports');
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 
@@ -36,6 +36,7 @@ Route::post('/manager/store', [ProdukController::class, 'store'])->name('store')
 Route::get('/', function () {
     return view('home');
 });
+
 Route::get('/user',[App\Http\Controllers\Auth\UserController::class, 'index'])->name('user');
 Route::post('/add_cart',[App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
 

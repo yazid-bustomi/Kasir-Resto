@@ -16,7 +16,8 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        return view('manager.data-products');
+        $produks = Produk::all();
+        return view('manager.data-products', ['produks' => $produks]);
     }
 
     /**
