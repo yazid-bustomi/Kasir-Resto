@@ -17,7 +17,6 @@ class CreateProduksTable extends Migration
             $table->id('id_produks');
             $table->string('nama_produks');
             $table->string('kode_produks');
-
             $table->foreignId('kategori_produks')->references('id_produk_kategories')->on('tbl_produk_kategories');
             $table->string('harga_produks');
             $table->string('stok_produks');

@@ -20,6 +20,7 @@ class ManagerController extends Controller
     {
         return view('manager.data-cashiers');
     }
+
     public function dataProducts()
     {
         $produk = Produk::all();
@@ -30,6 +31,7 @@ class ManagerController extends Controller
             'kategori' => $kategori,
         ]);
     }
+
     public function reports()
     {
         return view('manager.reports');
