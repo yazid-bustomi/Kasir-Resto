@@ -27,7 +27,9 @@ Route::get('/manager/data-clients', [ManagerController::class, 'dataClients'])->
 Route::get('/manager/data-cashiers', [ManagerController::class, 'dataCashiers'])->name('data.cashiers');
 Route::get('/manager/data-products', [ProdukController::class, 'index'])->name('data.products');
 Route::get('/manager/reports', [ManagerController::class, 'reports'])->name('reports');
+//rating
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
+Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->name('deleteRating');
 
 // CRUD produk
 Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formTambah-produk');
