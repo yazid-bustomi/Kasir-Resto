@@ -27,7 +27,7 @@ Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 
 // CRUD produk
 Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formTambah-produk');
-Route::post('/manager/store', [ProdukController::class, 'store'])->name('store');
+Route::post('/manager/store', [ProdukController::class, 'store'])->name('produk-store');
 
 Route::get('/', function () {
     return view('home');

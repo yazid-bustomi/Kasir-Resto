@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produk;
+use App\Models\ProdukKategory;
 use Illuminate\Http\Request;
 
 class ManagerController extends Controller
@@ -20,7 +22,13 @@ class ManagerController extends Controller
     }
     public function dataProducts()
     {
-        return view('manager.data-products');
+        $produk = Produk::all();
+        $kategori = ProdukKategory::all();
+
+        return view('manager.data-products', [
+            'produk' => $produk,
+            'kategori' => $kategori,
+        ]);
     }
     public function reports()
     {
