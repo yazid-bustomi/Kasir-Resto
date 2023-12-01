@@ -96,7 +96,6 @@
                                                 <td>{{ $rating->datetime }}</td>
                                                 <td>
                                                     <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                    <a href="{{ route('deleteRating', ['rating' => $rating->user_name]) }}" class="btn btn-danger btn-sm">Delete</a>
                                                     <a onclick="confirmDelete(this)" 
                                                         data-url="{{ route('deleteRating', ['rating' => $rating->user_name]) }}" 
                                                         class="btn btn-danger btn-sm" role="button" >Hapus</a>
