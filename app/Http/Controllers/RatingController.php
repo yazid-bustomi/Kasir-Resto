@@ -15,7 +15,9 @@ class RatingController extends Controller
     public function index()
     {
         $ratings = Rating::all();
-        return view('rating.index', ['ratings' => $ratings]);
+        return view('rating.index', [
+            'ratings' => $ratings
+        ]);
     }
 
     /**
@@ -25,7 +27,7 @@ class RatingController extends Controller
      */
     public function create()
     {
-        //
+        return view ('rating.create');
     }
 
     /**
@@ -79,8 +81,13 @@ class RatingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($user_name)
     {
-        //
+        $rating = Rating::where('user_name', $user_name)->firstOrFail();
+        $rating->delete();
+        
+        return redirect()->route('rating.index')->with('success', 'Rating berhasil dihapus');
     }
+    
+    
 }
