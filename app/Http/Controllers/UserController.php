@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,14 +13,14 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        
-        $users = DB::select('select * from users WHERE id = ?',[$request->session()->get('id')]);
+
+        $users = DB::select('select * from users WHERE id = ?', [$request->session()->get('id')]);
         $produk = DB::select('select * from produk');
-        $count = DB::select('select sum(jumlah) as total from cart where id_user=?',[$request->session()->get('id')]);
-        return view('user/home', ['title' => 'HOME','name' => $request->session()->get('name'),'role' => $request->session()->get('role'),'produk' => $produk,'count' => $count]);
+        $count = DB::select('select sum(jumlah) as total from cart where id_user=?', [$request->session()->get('id')]);
+        return view('user/home', ['title' => 'HOME', 'name' => $request->session()->get('name'), 'role' => $request->session()->get('role'), 'produk' => $produk, 'count' => $count]);
     }
 
     /**
