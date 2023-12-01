@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Produk;
 use App\Http\Requests\StoreProdukRequest;
 use App\Http\Requests\UpdateProdukRequest;
@@ -70,10 +71,11 @@ class ProdukController extends Controller
         $produk->deskripsi_produks = $request->deskripsi_produks;
         $produk->gambar_produks = $nama_gambar;
 
-        $produk->save();
-
-
-        return redirect()->route('data.products')->with('succes', 'produk berhasil di tambahkan ');
+        if ($produk->save()) {
+            return redirect()->route('data.products')->with('success', 'produk berhasil di tambahkan ');
+        } else {
+            return redirect()->back()->withInput();
+        }
     }
 
     /**
@@ -93,8 +95,15 @@ class ProdukController extends Controller
      * @param  \App\Models\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produk $produk)
+    public function edit($id_produks)
     {
+        // form edit
+        $kategori = ProdukKategory::all();
+        $produk = Produk::find($id_produks);
+        return view('manager.form.formedit-product', [
+            'produks' => $produk,
+            'kategories' => $kategori
+        ]);
     }
 
     /**
@@ -106,8 +115,44 @@ class ProdukController extends Controller
      */
     public function update(UpdateProdukRequest $request, Produk $produk)
     {
-        //
+        //update data produk
+        // validasi data dari form
+        $request->validate([
+            'nama_produks' => 'required',
+            'kode_produks' => 'required',
+            'kategori_produks' => 'required',
+            'harga_produks' => 'required|numeric',
+            'stok_produks' => 'required|integer',
+            'deskripsi_produks' => 'required',
+            'gambar_produks' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+        // dd($request);
+        // memeriksa gambar yg di upload
+        if ($request->hasFile('gambar_produks')) {
+            // upload gambar 
+            $gambar = $request->file('gambar_produks');
+            $nama_gambar = rand() . '.' . $gambar->getClientOriginalExtension();
+            $gambar->storeAs('public/img/uploads', $nama_gambar);
+        } else {
+            $nama_gambar = $produk->gambar_produks;
+        }
+
+        // simpan ke database
+        $produk->kategori_produks = $request->kategori_produks;
+        $produk->nama_produks = $request->nama_produks;
+        $produk->kode_produks = $request->kode_produks;
+        $produk->harga_produks = $request->harga_produks;
+        $produk->stok_produks = $request->stok_produks;
+        $produk->deskripsi_produks = $request->deskripsi_produks;
+        $produk->gambar_produks = $nama_gambar;
+
+        if ($produk->update()) {
+            return redirect()->route('data.products')->with('success', 'produk berhasil di ubah ');
+        } else {
+            return redirect()->back()->withInput();
+        }
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -117,6 +162,8 @@ class ProdukController extends Controller
      */
     public function destroy(Produk $produk)
     {
-        //
+        //hapus data
+        $produk->delete();
+        return redirect()->route('data.products')->with('success', 'produk berhasil di Hapus ');
     }
 }

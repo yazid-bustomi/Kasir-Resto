@@ -14,6 +14,8 @@
             $('#data-tabel').DataTable();
         });
 </script>
+
+
 @endsection
 
 @section('content')
@@ -74,15 +76,24 @@
                         <td>{{ $row->deskripsi_produks }}</td>
 
                         <td class="text-center">
-                            <a class="btn btn-success " href=""><i class="fa fa-edit small"></i></a>
-                            <a class="btn btn-danger " href=""><i class="fa fa-trash "></i></a>
+                            <button class="btn btn-outline-success btn-sm mb-1 "
+                                href="{{ route('formEdit-produk', $row->id_produks) }}"><i
+                                    class="fa fa-edit small"></i></button>
+                            {{-- <a class="btn btn-danger btn-sm small"
+                                href="{{ route('delete-produk', $row->id_produks) }}"><i
+                                    class="fa text-light fa-trash"></i></a> --}}
+                            <form action="{{ route('delete_produk', $row->id_produks) }}" method="POST">
+                                {{method_field('DELETE')}}
+                                @csrf
+                                <button id="delete" type="submit" class="btn btn-outline-danger btn-sm"><i
+                                        class="fa fa-trash"></i></button>
+                            </form>
+
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-
-
     </section>
 </div>
 @endsection
