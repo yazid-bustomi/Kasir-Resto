@@ -57,7 +57,7 @@
             <a class="btn btn-info mb-3" href="{{ route('formTambah-produk') }}">+
                 Data Product's</a>
 
-            <table class="table table-hover " id="data-tabel">
+            <table class="table table-hover border" id="data-tabel">
                 <thead>
                     <tr>
                         <th>No </th>
@@ -104,6 +104,18 @@
                     @endforeach
                 </tbody>
             </table>
+            <div class="small">
+                <i>
+                    Keterangan kategori produk:
+                    <span>
+                        @foreach ($kategori as $item)
+                        <small class="small text-bold">{{ $item->id_produk_kategories }}. {{
+                            $item->nama_kategori }}
+                        </small>
+                        @endforeach
+                    </span>
+                </i>
+            </div>
     </section>
 </div>
 @endsection
