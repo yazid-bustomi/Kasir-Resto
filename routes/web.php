@@ -34,13 +34,17 @@ Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->nam
 // CRUD produk
 Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formTambah-produk');
 Route::post('/manager/store', [ProdukController::class, 'store'])->name('produk-store');
+Route::get('/manager/{produk}/edit', [ProdukController::class, 'edit'])->name('formEdit-produk');
+Route::post('/manager/{produk}/update', [ProdukController::class, 'update'])->name('update-produk');
+Route::delete('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete_produk');
+
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/user',[App\Http\Controllers\Auth\UserController::class, 'index'])->name('user');
-Route::post('/add_cart',[App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
+Route::get('/user', [App\Http\Controllers\Auth\UserController::class, 'index'])->name('user');
+Route::post('/add_cart', [App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

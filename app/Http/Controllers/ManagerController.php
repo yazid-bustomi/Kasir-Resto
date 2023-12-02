@@ -27,7 +27,7 @@ class ManagerController extends Controller
         $kategori = ProdukKategory::all();
 
         return view('manager.data-products', [
-            'produk' => $produk,
+            'produks' => $produk,
             'kategori' => $kategori,
         ]);
     }

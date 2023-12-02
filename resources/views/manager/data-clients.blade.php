@@ -43,7 +43,7 @@
             <div class="container">
                 {{-- this content --}}
                 <a class="btn btn-info mb-3" href="{{ route('manager.index') }}"><i class="fa fa-arrow-left"></i></a>
-                <a class="btn btn-info mb-3" href="">+ Data Client's</a>
+                <a class="btn btn-info mb-3" href=""><i class="fa-solid fa-circle-plus"></i> Data Client's</a>
                 <table class="table table-hover" id="data-tabel">
                     <thead>
                         <tr>

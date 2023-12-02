@@ -5,7 +5,6 @@
     @include('manager.layouts.sidebar-manager')
 
 
-
     @yield('content')
 
 
@@ -13,3 +12,4 @@
     @include('layouts.footer')
 </div>
 <!-- ./wrapper -->
+@include('sweetalert::alert')
