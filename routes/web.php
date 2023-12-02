@@ -43,7 +43,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/user', [App\Http\Controllers\Auth\UserController::class, 'index'])->name('user');
+Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::post('/add_cart', [App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
 
 Auth::routes();

@@ -149,9 +149,9 @@ body {
             </div>
 
             <div class="row portfolio-container" style="padding-left:10%">
-            @foreach($produk as $d)
+            @foreach($Produk as $d)
                   <div class="col-lg-3 col-md-6 portfolio-item filter-{{$d->nama_kategori}} " style="background-color:#222831;padding:0px;border-radius:30px;margin-left:30px;" >
-                    <img class="card-img-top" src="uploads/{{$d->gambar_produks}}" alt="Card image" style="border-radius:30px 30px 0px 50px">
+                    <img class="card-img-top" src="storage/img/uploads/{{$d->gambar_produks}}" alt="Card image" style="border-radius:30px 30px 0px 50px">
                     <div class="card-body"  style="color:white;padding:30px;">
                       <h4 class="card-title">{{$d->nama_produks}}</h4>  
                       <p class="card-text">Rp {{$d->harga_produks}}</p>
@@ -169,7 +169,7 @@ body {
               <div class="modal fade" id="exampleModals{{$d->id_produks}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog " role="document">
                   <div class="modal-content card" style="background-color:#E7F6F2">
-                    <img class="card-img-top" src="uploads/{{$d->gambar_produks}}" alt="Card image">
+                    <img class="card-img-top" src="{{ asset('storage/img/uploads/' . $d->gambar_produks) }}" alt="Card image">
                     <div class="card-body" align="center">
                       <h4 class="card-title">{{$d->nama_produks}}</h4>
                       <p class="card-text"><b>Harga: </b> {{$d->harga_produks}}</p>
