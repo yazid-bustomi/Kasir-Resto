@@ -13,6 +13,16 @@
     $(function() {
             $('#data-tabel').DataTable();
         });
+
+            function confirmDelete() {
+                var result =confirm("Are you sure you want to delete this item?");
+                if (result) {
+                    // User clicked "OK," submit the form
+                    document.getElementById('deleteForm').submit();
+                }else{
+                    return false;
+                }
+            }
 </script>
 
 
@@ -76,17 +86,17 @@
                         <td>{{ $row->deskripsi_produks }}</td>
 
                         <td class="text-center">
-                            <button class="btn btn-outline-success btn-sm mb-1 "
-                                href="{{ route('formEdit-produk', $row->id_produks) }}"><i
-                                    class="fa fa-edit small"></i></button>
-                            {{-- <a class="btn btn-danger btn-sm small"
-                                href="{{ route('delete-produk', $row->id_produks) }}"><i
-                                    class="fa text-light fa-trash"></i></a> --}}
-                            <form action="{{ route('delete_produk', $row->id_produks) }}" method="POST">
-                                {{method_field('DELETE')}}
+                            <a class="btn btn-outline-success btn-sm mb-1 "
+                                href="{{ route('formEdit-produk', $row->id_produks) }}"><i class="fa fa-edit small"></i>
+                            </a>
+
+                            <form id="deleteForm" action="{{ route('delete-produk', $row->id_produks) }}" method="POST">
                                 @csrf
-                                <button id="delete" type="submit" class="btn btn-outline-danger btn-sm"><i
-                                        class="fa fa-trash"></i></button>
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-outline-danger btn-sm mb-1"
+                                    onclick="return confirm('Are you sure?')">
+                                    <i class="fa fa-trash"></i>
+                                </button>
                             </form>
 
                         </td>
