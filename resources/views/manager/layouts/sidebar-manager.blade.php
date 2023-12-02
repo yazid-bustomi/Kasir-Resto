@@ -35,7 +35,7 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item pl-2 mr-2">
                             <a href="{{ route('data.clients') }}" class="nav-link ">
                                 <i class="far fa-user nav-icon"></i>
@@ -50,12 +50,12 @@
                             </a>
                         </li>
 
-                        {{-- <li class="nav-item pl-2 mr-2">
-                            <a href="{{ route('data-cashiers') }}" class="nav-link">
+                        <li class="nav-item pl-2 mr-2">
+                            <a href="{{ route('data.cashiers') }}" class="nav-link">
                                 <i class="fa fa-cash-register nav-icon"></i>
                                 <p>Data Kasir</p>
                             </a>
-                        </li> --}}
+                        </li>
                         <li class="nav-item pl-2 mr-2">
                             <a href="{{ route('data.products') }}" class="nav-link">
                                 <i class="fa fa-utensils nav-icon"></i>
