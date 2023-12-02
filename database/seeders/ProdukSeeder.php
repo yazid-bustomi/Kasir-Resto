@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Produk;
 use Illuminate\Database\Seeder;
-use DB;
+use Illuminate\Support\Facades\DB;
 class ProdukSeeder extends Seeder
 {
     /**
@@ -14,6 +14,6 @@ class ProdukSeeder extends Seeder
      */
     public function run()
     {
-        //
+       
     }
 }
