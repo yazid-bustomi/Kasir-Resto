@@ -14,15 +14,13 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
-        
+    {   
 
         $produk = Produk::all();
 
         return view ('nama view', [
         'Produk' =>$produk, 
         ]);
-
     }
 
     /**
