@@ -36,7 +36,7 @@ Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formT
 Route::post('/manager/store', [ProdukController::class, 'store'])->name('produk-store');
 Route::get('/manager/{produk}/edit', [ProdukController::class, 'edit'])->name('formEdit-produk');
 Route::post('/manager/{produk}/update', [ProdukController::class, 'update'])->name('update-produk');
-Route::delete('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete_produk');
+Route::delete('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete-produk');
 
 
 Route::get('/', function () {
