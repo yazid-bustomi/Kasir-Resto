@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use App\Models\Produk;
 
 class UserController extends Controller
 {
@@ -18,7 +19,7 @@ class UserController extends Controller
 
         $produk = Produk::all();
 
-        return view ('nama view', [
+        return view ('user.home', [
         'Produk' =>$produk, 
         ]);
     }
