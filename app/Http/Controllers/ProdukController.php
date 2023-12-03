@@ -7,6 +7,7 @@ use App\Models\Produk;
 use App\Http\Requests\StoreProdukRequest;
 use App\Http\Requests\UpdateProdukRequest;
 use App\Models\ProdukKategory;
+use Illuminate\Support\Facades\File;
 
 class ProdukController extends Controller
 {
@@ -17,8 +18,12 @@ class ProdukController extends Controller
      */
     public function index()
     {
+        $kategori = ProdukKategory::all();
         $produks = Produk::all();
-        return view('manager.data-products', ['produks' => $produks]);
+        return view('manager.data-products', [
+            'produks' => $produks,
+            'kategori' => $kategori,
+        ]);
     }
 
     /**
@@ -162,8 +167,23 @@ class ProdukController extends Controller
      */
     public function destroy(Produk $produk)
     {
-        //hapus data
+        // Dapatkan nama file gambar
+        $imageName = $produk->gambar_produks;
+
+        // Hapus entri dari database
         $produk->delete();
-        return redirect()->route('data.products')->with('success', 'produk berhasil di Hapus ');
+
+        // Hapus file gambar dari folder jika ada
+        if ($imageName) {
+            $imagePath = public_path('storage/img/uploads/') . $imageName;
+
+            // Periksa apakah file gambar ada sebelum dihapus
+            if (File::exists($imagePath)) {
+                // Hapus file gambar
+                File::delete($imagePath);
+            }
+        }
+
+        return redirect()->route('data.products')->with('success', 'Produk berhasil dihapus.');
     }
 }
