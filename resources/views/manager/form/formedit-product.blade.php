@@ -23,11 +23,6 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            @if(session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-            @endif
             {{-- this content --}}
             <div class="container mt-3">
                 <form action="{{ route('update-produk', $produks) }}" method="post" enctype="multipart/form-data">
@@ -119,10 +114,7 @@
                 </form>
             </div>
         </div>
+    </section>
 </div>
 
-
-</div>
-</section>
-</div>
 @endsection
