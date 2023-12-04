@@ -1,20 +1,31 @@
 @extends('manager/layouts.master')
 
 @section('css')
-    {{--
-<link rel="stylesheet" href="{{ asset('asset/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}"> --}}
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 @endsection
 
 @section('javascript')
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
-    <script>
-        $(function() {
+<script>
+    $(function() {
             $('#data-tabel').DataTable();
         });
-    </script>
+
+            function confirmDelete() {
+                var result =confirm("Are you sure you want to delete this item?");
+                if (result) {
+                    // User clicked "OK," submit the form
+                    document.getElementById('deleteForm').submit();
+                }else{
+                    return false;
+                }
+            }
+</script>
+
+
 @endsection
 
 @section('content')
@@ -39,12 +50,14 @@
     <!-- /.content-header -->
     <!-- Main content -->
     <section class="content mt-4 ml-3">
-        <div class="container-fluid">
 
+        <div class="container-fluid">
             {{-- this content --}}
             <a class="btn btn-info mb-3" href="{{ route('manager.index') }}"><i class="fa fa-arrow-left"></i></a>
-            <a class="btn btn-info mb-3" href="{{ route('formTambah-produk') }}">+ Data Product's</a>
-            <table class="table table-hover " id="data-tabel">
+            <a class="btn btn-info mb-3" href="{{ route('formTambah-produk') }}">+
+                Data Product's</a>
+
+            <table class="table table-hover border" id="data-tabel">
                 <thead>
                     <tr>
                         <th>No </th>
@@ -59,7 +72,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($produk as $row)
+                    @foreach ($produks as $row)
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{ $row->kode_produks }}</td>
@@ -73,19 +86,36 @@
                         <td>{{ $row->deskripsi_produks }}</td>
 
                         <td class="text-center">
-                            <a class="btn btn-success " href=""><i class="fa fa-edit small"></i></a>
-                            <a class="btn btn-danger " href=""><i class="fa fa-trash "></i></a>
+                            <a class="btn btn-outline-success btn-sm mb-1 "
+                                href="{{ route('formEdit-produk', $row->id_produks) }}"><i class="fa fa-edit small"></i>
+                            </a>
+
+                            <form id="deleteForm" action="{{ route('delete-produk', $row->id_produks) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-outline-danger btn-sm mb-1"
+                                    onclick="return confirm('Are you sure?')">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </form>
+
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-            <span><b><i>keterangan kategori Produk: <br></i></b></span>
-            @foreach ($kategori as $k)
-            <span><small><i> {{ $k->id_produk_kategories }}. {{ $k->nama_kategori
-                        }}</i></small></span>
-            @endforeach
-
-        </section>
-    </div>
+            <div class="small">
+                <i>
+                    Keterangan kategori produk:
+                    <span>
+                        @foreach ($kategori as $item)
+                        <small class="small text-bold">{{ $item->id_produk_kategories }}. {{
+                            $item->nama_kategori }}
+                        </small>
+                        @endforeach
+                    </span>
+                </i>
+            </div>
+    </section>
+</div>
 @endsection
