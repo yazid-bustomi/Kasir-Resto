@@ -26,7 +26,6 @@ Route::get('/manager', [ManagerController::class, 'index'])->name('manager.index
 Route::get('/manager/data-clients', [ManagerController::class, 'dataClients'])->name('data.clients');
 Route::get('/manager/data-cashiers', [ManagerController::class, 'dataCashiers'])->name('data.cashiers');
 Route::get('/manager/data-products', [ProdukController::class, 'index'])->name('data.products');
-Route::get('/manager/reports', [ManagerController::class, 'reports'])->name('reports');
 //rating
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->name('deleteRating');
@@ -36,7 +35,7 @@ Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formT
 Route::post('/manager/store', [ProdukController::class, 'store'])->name('produk-store');
 Route::get('/manager/{produk}/edit', [ProdukController::class, 'edit'])->name('formEdit-produk');
 Route::post('/manager/{produk}/update', [ProdukController::class, 'update'])->name('update-produk');
-Route::delete('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete-produk');
+Route::get('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete-produk');
 
 
 Route::get('/', function () {

@@ -68,12 +68,7 @@
                                 <p>Data Rating</p>
                             </a>
                         </li>
-                        <li class="nav-item pl-2 mr-2">
-                            <a href="{{ route('reports') }}" class="nav-link">
-                                <i class="fa fa-book nav-icon"></i>
-                                <p>Laporan</p>
-                            </a>
-                        </li>
+
                     </ul>
                 </li>
 

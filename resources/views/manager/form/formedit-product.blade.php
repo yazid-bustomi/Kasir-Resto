@@ -90,7 +90,7 @@
                             <input name="gambar_produks" type="file" class="form-control" id="produk"
                                 value="{{ $produks->gambar_produks }}">
                             @if($produks->gambar_produks)
-                            <img src="{{ asset('storage/img/uploads/' . $produks->gambar_produks) }}" width="50px"
+                            <img src="{{ asset('uploads/' . $produks->gambar_produks) }}" width="50px"
                                 alt="Gambar Produk">
                             @endif
 
