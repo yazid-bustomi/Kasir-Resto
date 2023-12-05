@@ -5,7 +5,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Food</title>
+  <link rel="icon" href="{{ asset('img/resto.png') }}">
+  <title>{{ $title }}</title>
   <!-- Bootstrap -->
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
   <!-- Animate.css -->
@@ -22,11 +23,10 @@
   <!-- Theme styles -->
   <link href="/css/dot-icons.css" rel="stylesheet" type="text/css">
   <link href="/css/theme.css" rel="stylesheet" type="text/css">
-
-
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5f52f05008.js" crossorigin="anonymous"></script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -96,11 +96,13 @@
 </head>
 
 <body class="body">
+
   <header class="header header-horizontal header-view-pannel">
     <div class="container">
       <nav class="navbar">
-        <a class="navbar-brand" href="./">
-        </a>
+
+
+
 
         {{-- @if (!Auth::check())
         <a class="nav-link text-decoration-none text-white" href="/login">Login</a>
@@ -129,13 +131,14 @@
                 10
               </span>
             </a>&nbsp;&nbsp;&nbsp;
-
           </div>
         </div>
       </nav>
     </div>
   </header>
   <br><br><br>
+  <a class="btn-theme btn  ml-3 text-light" style="background-color: #395B64; border-radius: 15px"
+    href="{{route('Home-user')}}">Kembali</a>
   <h2 align="center">Our Menu</h2>
 
   <!-- ======= Portfolio Section ======= -->

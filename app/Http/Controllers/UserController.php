@@ -15,12 +15,20 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {   
+    {
 
         $produk = Produk::all();
 
-        return view ('user.home', [
-        'Produk' =>$produk, 
+        return view('user.home', [
+            'Produk' => $produk,
+            'title' => 'food-menu'
+        ]);
+    }
+
+    public function home()
+    {
+        return view('user.banners', [
+            'title' => 'Home-banners'
         ]);
     }
 
