@@ -10,15 +10,16 @@ class ManagerController extends Controller
 {
     public function index()
     {
-        return view('manager.dashboard-manager');
+        return view('manager.dashboard-manager', [
+            'title' => 'Dashboard',
+        ]);
     }
-    public function dataClients()
-    {
-        return view('manager.data-clients');
-    }
+
     public function dataCashiers()
     {
-        return view('manager.data-cashiers');
+        return view('manager.data-cashiers', [
+            'title' => 'Data Cashier',
+        ]);
     }
 
     public function dataProducts()
@@ -29,11 +30,7 @@ class ManagerController extends Controller
         return view('manager.data-products', [
             'produks' => $produk,
             'kategori' => $kategori,
+            'title' => 'Data Produk'
         ]);
-    }
-
-    public function reports()
-    {
-        return view('manager.reports');
     }
 }

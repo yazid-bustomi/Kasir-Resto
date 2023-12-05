@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Rating;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class RatingController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,11 @@ class RatingController extends Controller
      */
     public function index()
     {
-        $ratings = Rating::all();
-        return view('rating.index', [
-            'ratings' => $ratings,
-            'title' => 'Data Rating'
+        //
+        $user = User::all();
+        return view('manager.data-clients', [
+            'title' => 'Data Client',
+            'user' => $user
         ]);
     }
 
@@ -28,8 +29,9 @@ class RatingController extends Controller
      */
     public function create()
     {
-        return view('rating.create', [
-            'title' => ' Rating'
+        //
+        return view('manager.form.formAdd-clients', [
+            'title' => 'Tambah Data Client',
         ]);
     }
 
@@ -42,6 +44,26 @@ class RatingController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|unique:tbl_users,email',
+            'password' => 'required',
+            'phone' => 'required',
+            'role' => 'required|max:50',
+
+        ]);
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->phone = $request->phone;
+        $user->role = $request->role;
+
+        if ($user->save()) {
+            return redirect()->route('data.clients')->with('success', 'Data Berhasil di tambahkan');
+        } else {
+            return back()->withInput()->with('error', 'Gagal menambah data');
+        }
     }
 
     /**
@@ -84,11 +106,8 @@ class RatingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($user_name)
+    public function destroy($id)
     {
-        $rating = Rating::where('user_name', $user_name)->firstOrFail();
-        $rating->delete();
-
-        return redirect()->route('rating.index')->with('success', 'Rating berhasil dihapus');
+        //
     }
 }

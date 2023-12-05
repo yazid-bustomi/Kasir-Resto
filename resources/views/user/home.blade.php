@@ -5,7 +5,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Food</title>
+  <link rel="icon" href="{{ asset('img/resto.png') }}">
+  <title>{{ $title }}</title>
   <!-- Bootstrap -->
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
   <!-- Animate.css -->
@@ -22,11 +23,10 @@
   <!-- Theme styles -->
   <link href="/css/dot-icons.css" rel="stylesheet" type="text/css">
   <link href="/css/theme.css" rel="stylesheet" type="text/css">
-
-
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5f52f05008.js" crossorigin="anonymous"></script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -96,11 +96,13 @@
 </head>
 
 <body class="body">
+
   <header class="header header-horizontal header-view-pannel">
     <div class="container">
       <nav class="navbar">
-        <a class="navbar-brand" href="./">
-        </a>
+
+
+
 
         {{-- @if (!Auth::check())
         <a class="nav-link text-decoration-none text-white" href="/login">Login</a>
@@ -129,13 +131,14 @@
                 10
               </span>
             </a>&nbsp;&nbsp;&nbsp;
-
           </div>
         </div>
       </nav>
     </div>
   </header>
   <br><br><br>
+  <a class="btn-theme btn  ml-3 text-light" style="background-color: #395B64; border-radius: 15px"
+    href="{{route('Home-user')}}">Kembali</a>
   <h2 align="center">Our Menu</h2>
 
   <!-- ======= Portfolio Section ======= -->
@@ -158,7 +161,7 @@
         @foreach($Produk as $d)
         <div class="col-lg-3 col-md-6 portfolio-item filter-{{$d->nama_kategori}} "
           style="background-color:#222831;padding:0px;border-radius:30px;margin-left:30px;">
-          <img class="card-img-top" src="storage/img/uploads/{{$d->gambar_produks}}" alt="Card image"
+          <img class="card-img-top" src="{{ asset('uploads/' . $d->gambar_produks) }}" alt="Card image"
             style="border-radius:30px 30px 0px 50px">
           <div class="card-body" style="color:white;padding:30px;">
             <h4 class="card-title">{{$d->nama_produks}}</h4>
@@ -259,6 +262,29 @@
 
 
 
+        <a class="scroll-top disabled" href="#"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+        <footer class="flex-shrink-0 section-text-white footer footer-links" >
+                
+            <div class="footer-copy">
+                <div class="container text-white-50"><strong>&copy; </strong>
+                  All rights reserved.</div>
+            </div>
+        </footer>
+        
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Paralax.js -->
+        <script src="/parallax.js/parallax.js"></script>
+        <!-- Waypoints -->
+        <script src="/waypoints/jquery.waypoints.min.js"></script>
+        <!-- Slick carousel -->
+        <script src="/slick/slick.min.js"></script>
+        <!-- Magnific Popup -->
+        <script src="/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!-- Inits product scripts -->
+        <script src="/js/script.js"></script>
   <a class="scroll-top disabled" href="#"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
   <footer class="flex-shrink-0 section-text-white footer footer-links">
 
