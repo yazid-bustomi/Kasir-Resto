@@ -7,14 +7,31 @@
 @endsection
 
 @section('javascript')
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('js/dataTables.bootstrap4.min.js') }}"></script>
+    <script>
+        $(function() {
+            $("#data-table").DataTable();
+        })
 
-<script>
-    $(function() {
-    $('#data-tabel').DataTable();
-    });
-</script>
+    </script>
+
+    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
+    <script>
+        confirmDelete = function(button){
+            var url = $(button).data('url');
+            swal({
+                'title': 'konfirmasi hapus',
+                'text' : 'Yakin Untuk Menghapus Data Ini',
+                'dangermode' : true,
+                'buttons' : true
+            }).then(function(value){
+                if(value){
+                    window.location = url;
+                }
+            })
+        }
+    </script>
 @endsection
 
 @section('content')
@@ -79,7 +96,10 @@
                                                 <td>{{ $rating->datetime }}</td>
                                                 <td>
                                                     <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                    <a href="#" class="btn btn-danger btn-sm">Delete</a> 
+                                                    <a onclick="confirmDelete(this)" 
+                                                        data-url="{{ route('deleteRating', ['rating' => $rating->user_name]) }}" 
+                                                        class="btn btn-danger btn-sm" role="button" >Hapus</a>
+
                                                 </td>
                                             </tr>
                                         @endforeach

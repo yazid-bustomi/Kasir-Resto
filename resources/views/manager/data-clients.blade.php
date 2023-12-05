@@ -43,7 +43,8 @@
             <div class="container">
                 {{-- this content --}}
                 <a class="btn btn-info mb-3" href="{{ route('manager.index') }}"><i class="fa fa-arrow-left"></i></a>
-                <a class="btn btn-info mb-3" href="">+ Data Client's</a>
+                <a class="btn btn-info mb-3" href="{{ route('form') }}"><i class="fa-solid fa-circle-plus"></i> Data
+                    Client's</a>
                 <table class="table table-hover" id="data-tabel">
                     <thead>
                         <tr>
@@ -56,29 +57,28 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($user as $row)
                         <tr>
-                            <td>1</td>
-                            <td>Manajer</td>
-                            <td>manajer@gmail.com</td>
-                            <td>000000</td>
-                            <td>manajer</td>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$row->name}}</td>
+                            <td>{{$row->email}}</td>
+                            <td>{{$row->phone}}</td>
+                            <td>{{$row->role}}</td>
+
                             <td class="text-center">
-                                <button class="btn btn-success mr-5" href="">edit</button>
-                                <button class="btn btn-danger " href="">delete</button>
+                                <a class="btn btn-outline-success btn-sm mb-1 "
+                                    href="{{ route('formEdit-clients', $row->id_users) }}"><i
+                                        class="fa fa-edit small"></i>
+                                </a>
+                                <a class="btn btn-outline-danger btn-sm mb-1 "
+                                    href="{{ route('delete-clients', $row->id_users) }}">
+                                    <i class=" fa fa-trash"></i>
+                                </a>
 
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Kasir</td>
-                            <td>kasir@gmail.com</td>
-                            <td>08080808</td>
-                            <td>kasir</td>
-                            <td class="text-center">
-                                <button class="btn btn-success mr-5" href="">edit</button>
-                                <button class="btn btn-danger " href="">delete</button>
-                            </td>
-                        </tr>
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>

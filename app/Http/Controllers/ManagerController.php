@@ -2,24 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produk;
+use App\Models\ProdukKategory;
 use Illuminate\Http\Request;
 
 class ManagerController extends Controller
 {
     public function index()
     {
-        return view('manager.dashboard-manager');
+        return view('manager.dashboard-manager', [
+            'title' => 'Dashboard',
+        ]);
     }
-    public function dataClients()
-    {
-        return view('manager.data-clients');
-    }
+
     public function dataCashiers()
     {
-        return view('manager.data-cashiers');
+        return view('manager.data-cashiers', [
+            'title' => 'Data Cashier',
+        ]);
     }
-    public function reports()
+
+    public function dataProducts()
     {
-        return view('manager.reports');
+        $produk = Produk::all();
+        $kategori = ProdukKategory::all();
+
+        return view('manager.data-products', [
+            'produks' => $produk,
+            'kategori' => $kategori,
+            'title' => 'Data Produk'
+        ]);
     }
 }
