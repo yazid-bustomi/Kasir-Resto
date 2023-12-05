@@ -10,9 +10,12 @@ class ProdukKategory extends Model
     use HasFactory;
 
     protected $guarded = ['id_produk_kategories'];
-    public function produks() {
+    protected $fillable = ['nama_kategori'];
+
+
+    public function produks()
+    {
         return $this->hasMany(Produk::class, 'id_produks');
     }
     protected $table = 'tbl_produk_kategories';
-
 }
