@@ -18,7 +18,10 @@ class OrderController extends Controller
     {
         // menampilkan list yang order
         $orders = Order::all();
-        return view('order.index', ['orders' => $orders]); 
+        return view('order.index', [
+            'orders' => $orders,
+            'title' => 'Data Order'
+        ]);
     }
 
     /**
