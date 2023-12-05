@@ -21,7 +21,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 33000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Layered Caranggesing and rich coconut panna cota, crumble', 
-            'gambar_produks' => '1482302358.jpg'
+            'gambar_produks' => '1.jpg'
         ]);
         
         $produk2 = Produk::create([
@@ -31,7 +31,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 40000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Poured Tiramisu with mascarpone cheese, fresh milk', 
-            'gambar_produks' => '499053501.jpg'
+            'gambar_produks' => '2.jpg'
         ]);
         
         $produk3 = Produk::create([
@@ -41,7 +41,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 39000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Truffle Churros served with crumble and vanilla ice cream', 
-            'gambar_produks' => '1601369772.jpg'
+            'gambar_produks' => '3.jpg'
         ]);
         
         $produk4 = Produk::create([
@@ -51,7 +51,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 33000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Classic Creme Brulle with fresh fruit', 
-            'gambar_produks' => '1802203432.jpg'
+            'gambar_produks' => '4.jpg'
         ]);
         
         $produk5 = Produk::create([
@@ -61,7 +61,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 42000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Belgian sweet waffle, Nutella caramelized banana, caramel crumble and ice cream', 
-            'gambar_produks' => '1387242715.jpg'
+            'gambar_produks' => '5.jpg'
         ]);
         
         $produk6 = Produk::create([
@@ -71,7 +71,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 35000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Choco lava cake with caramel crumble, fresh fruit and ice cream', 
-            'gambar_produks' => '920149739.jpg'
+            'gambar_produks' => '6.jpg'
         ]);
         
         $produk7 = Produk::create([
@@ -81,7 +81,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 37000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Grilled banana with jackfruit', 
-            'gambar_produks' => '340260035.jpg'
+            'gambar_produks' => '7.jpg'
         ]);
         
         $produk8 = Produk::create([
@@ -91,7 +91,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 41000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Fresh honey banana with ice cream cookies', 
-            'gambar_produks' => '1485153965.jpg'
+            'gambar_produks' => '8.jpg'
         ]);
         
         $produk9 = Produk::create([
@@ -101,7 +101,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 38000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Espresso mix choco with ice cream, granola and cookies', 
-            'gambar_produks' => '1279725845.jpg'
+            'gambar_produks' => '9.jpg'
         ]);
         
         $produk10 = Produk::create([
@@ -111,7 +111,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 36000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Vanilla panacotta with strawberry sauce', 
-            'gambar_produks' => '1808450805.jpg'
+            'gambar_produks' => '10.jpg'
         ]);
         
         $produk11 = Produk::create([
@@ -121,7 +121,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 36000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Strawberry jam with ice cream and kiwi slice', 
-            'gambar_produks' => '2016853802.jpg'
+            'gambar_produks' => '11.jpg'
         ]);
         
         $produk12 = Produk::create([
@@ -131,7 +131,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 43000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Chocolate cake topped with very rich dark chocolate', 
-            'gambar_produks' => '193739841.jpg'
+            'gambar_produks' => '12.jpg'
         ]);
         
         $produk13 = Produk::create([
@@ -141,7 +141,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 31000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Peanut sauce mix oatmilk and chocolate', 
-            'gambar_produks' => '900640671.jpg'
+            'gambar_produks' => '13.jpg'
         ]);
         
         $produk14 = Produk::create([
@@ -151,7 +151,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 40000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Pineapple and coconut water blend', 
-            'gambar_produks' => '975442692.jpg'
+            'gambar_produks' => '14.jpg'
         ]);
         
         $produk15 = Produk::create([
@@ -161,7 +161,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 31000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Creamy strawberry Smoothies', 
-            'gambar_produks' => '1256281793.jpg'
+            'gambar_produks' => '15.jpg'
         ]);
         
         $produk16 = Produk::create([
@@ -171,7 +171,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 35000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Creamy coffee with apple and cinnamon flavor', 
-            'gambar_produks' => '1081053433.jpg'
+            'gambar_produks' => '16.jpg'
         ]);
         
         $produk17 = Produk::create([
@@ -181,7 +181,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 32000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Mix coconut pineapple juice and lemon', 
-            'gambar_produks' => '1560980480.jpg'
+            'gambar_produks' => '17.jpg'
         ]);
         
         $produk18 = Produk::create([
@@ -191,7 +191,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 39000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Creamy sweet and sour', 
-            'gambar_produks' => '711229474.jpg'
+            'gambar_produks' => '18.jpg'
         ]);
 
         $produk19 = Produk::create([
@@ -201,7 +201,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 35000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Fresh vegetable with pineapple juice', 
-            'gambar_produks' => '634836966.jpg'
+            'gambar_produks' => '19.jpg'
         ]);
         
         $produk20 = Produk::create([
@@ -211,7 +211,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 35000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Mix cold brew, Ginger flavor and lemon juice', 
-            'gambar_produks' => '297688323.jpg'
+            'gambar_produks' => '20.jpg'
         ]);
         
         $produk21 = Produk::create([
@@ -221,7 +221,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 32000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Sparkling coconut water and mint', 
-            'gambar_produks' => '1991055822.jpg'
+            'gambar_produks' => '21.jpg'
         ]);
         
         $produk22 = Produk::create([
@@ -231,7 +231,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 37000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Fresh sweet fruit and tropical fruit', 
-            'gambar_produks' => '1323953647.jpg'
+            'gambar_produks' => '22.jpg'
         ]);
         
         $produk23 = Produk::create([
@@ -241,7 +241,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 33000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Fresh sour with coconut water, and tropical fruit', 
-            'gambar_produks' => '1382438287.jpg'
+            'gambar_produks' => '23.jpg'
         ]);
         
         $produk24 = Produk::create([
@@ -251,7 +251,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 33000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Avocado Honey Bowl', 
-            'gambar_produks' => '1570648537.jpg'
+            'gambar_produks' => '24.jpg'
         ]);
         
         $produk25 = Produk::create([
@@ -261,7 +261,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 130000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Grilled beef wagyu maranggi and choice of side dish', 
-            'gambar_produks' => '318353948.jpg'
+            'gambar_produks' => '25.jpg'
         ]);
         
         $produk26 = Produk::create([
@@ -271,7 +271,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 75000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Classic chicken cordon blue served with lyonnese potato and mushroom', 
-            'gambar_produks' => '1044437302.jpg'
+            'gambar_produks' => '26.jpg'
         ]);
         
         $produk27 = Produk::create([
@@ -281,7 +281,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 98000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Slow-cooked beef in creamy sauce and mushroom served with choice of side dish', 
-            'gambar_produks' => '902265994.jpg'
+            'gambar_produks' => '27.jpg'
         ]);
         
         $produk28 = Produk::create([
@@ -291,7 +291,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 115000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Grilled Norwegian salmon with garlic lemon butter sauce and choice of side dish', 
-            'gambar_produks' => '396115353.jpg'
+            'gambar_produks' => '28.jpg'
         ]);
         
         $produk29 = Produk::create([
@@ -301,7 +301,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 85000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Grilled salmon served with fragrant jasmine rice, mentai sauce, scramble egg, and seaweed', 
-            'gambar_produks' => '1993259127.jpg'
+            'gambar_produks' => '29.jpg'
         ]);
         
         $produk30 = Produk::create([
@@ -311,7 +311,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 89000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Pad Thai with seafood, vegie, chilli flake, and crackers', 
-            'gambar_produks' => '1277462382.jpg'
+            'gambar_produks' => '30.jpg'
         ]);
 
         $produk31 = Produk::create([
@@ -321,7 +321,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 74000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Chinese BBQ Chicken, Hainan rice, and Hainan Broth', 
-            'gambar_produks' => '1577525036.jpg'
+            'gambar_produks' => '31.jpg'
         ]);
         
         $produk32 = Produk::create([
@@ -331,7 +331,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 76000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Ejo fried rice with wagyu, acar, and crackers', 
-            'gambar_produks' => '1268915161.jpg'
+            'gambar_produks' => '32.jpg'
         ]);
         
         $produk33 = Produk::create([
@@ -341,7 +341,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 125000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Served with mashed potato, sautéed spinach, and chickpeas', 
-            'gambar_produks' => '200416766.jpg'
+            'gambar_produks' => '33.jpg'
         ]);
         
         $produk34 = Produk::create([
@@ -351,7 +351,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 158000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Grilled US top blade, grilled prawn, potato mozzarella braised shortplate, and pepper sauce', 
-            'gambar_produks' => '1952687587.jpg'
+            'gambar_produks' => '34.jpg'
         ]);
         
         $produk35 = Produk::create([
@@ -361,7 +361,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 98000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Spicy pasta with salmon belly and kemangi tuile', 
-            'gambar_produks' => '1408087414.jpg'
+            'gambar_produks' => '35.jpg'
         ]);
         
         $produk36 = Produk::create([
@@ -371,7 +371,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 88000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Vegetable and scramble egg, served with chickpea, slice avocado, brown, and sautéed mushroom', 
-            'gambar_produks' => '520189218.jpg'
+            'gambar_produks' => '36.jpg'
         ]);
         
         $produk37 = Produk::create([
@@ -381,7 +381,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 25000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Crispy onion rings with tartar sauce', 
-            'gambar_produks' => '1103706762.jpg'
+            'gambar_produks' => '37.jpg'
         ]);
         
         $produk38 = Produk::create([
@@ -391,7 +391,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 22000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Original french fries', 
-            'gambar_produks' => '1635586368.jpg'
+            'gambar_produks' => '38.jpg'
         ]);
         
         $produk39 = Produk::create([
@@ -401,7 +401,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 32000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Honey butter crispy banana, caramel sauce, and vanilla ice cream', 
-            'gambar_produks' => '662250236.jpg'
+            'gambar_produks' => '39.jpg'
         ]);
         
         $produk40 = Produk::create([
@@ -411,7 +411,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 22000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Crispy tofu with savory seasoning', 
-            'gambar_produks' => '1419651279.jpg'
+            'gambar_produks' => '20.jpg'
         ]);
         
         $produk41 = Produk::create([
@@ -421,7 +421,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 30000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Tender fried cassava with cheese sauce', 
-            'gambar_produks' => '1964402749.jpg'
+            'gambar_produks' => '21.jpg'
         ]);
         
         $produk42 = Produk::create([
@@ -431,7 +431,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 28000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Seafood twisted dough, creamy mayonnaise, sesame sauce, and katsuboushi', 
-            'gambar_produks' => '429308850.jpg'
+            'gambar_produks' => '42.jpg'
         ]);
         
         $produk43 = Produk::create([
@@ -441,7 +441,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 37000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Crispy chicken wings garlic parmesan', 
-            'gambar_produks' => '1627769077.jpg'
+            'gambar_produks' => '43.jpg'
         ]);
         
         $produk44 = Produk::create([
@@ -451,7 +451,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 28000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => '150g potato wedges in spicy seasoning and tartar sauce', 
-            'gambar_produks' => '704125606.jpg'
+            'gambar_produks' => '44.jpg'
         ]);
         
         $produk45 = Produk::create([
@@ -461,7 +461,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 31000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Melted mozzarella with in and out sauce', 
-            'gambar_produks' => '1797181532.jpg'
+            'gambar_produks' => '45.jpg'
         ]);
         
         $produk46 = Produk::create([
@@ -471,7 +471,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 29000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Crispy calamari rings with tartar sauce', 
-            'gambar_produks' => '1751648732.jpg'
+            'gambar_produks' => '46.jpg'
         ]);
         
         $produk47 = Produk::create([
@@ -481,7 +481,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 40000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Crispy fried fish, fries, and tartar sauce', 
-            'gambar_produks' => '97477903.jpg'
+            'gambar_produks' => '47.jpg'
         ]);
         
         $produk48 = Produk::create([
@@ -491,7 +491,7 @@ class ProdukSeeder extends Seeder
             'harga_produks' => 37000, 
             'stok_produks' => 50, 
             'deskripsi_produks' => 'Crispy chicken wings honey BBQ with bell pepper aioli sauce', 
-            'gambar_produks' => '393701110.jpg'
+            'gambar_produks' => '48.jpg'
         ]);
         
     }

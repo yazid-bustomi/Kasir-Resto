@@ -21,11 +21,14 @@ use App\Http\Requests;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 // route manager 
 Route::get('/manager', [ManagerController::class, 'index'])->name('manager.index');
 Route::get('/manager/data-clients', [ManagerController::class, 'dataClients'])->name('data.clients');
 Route::get('/manager/data-cashiers', [ManagerController::class, 'dataCashiers'])->name('data.cashiers');
 Route::get('/manager/data-products', [ProdukController::class, 'index'])->name('data.products');
+
 //rating
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->name('deleteRating');
