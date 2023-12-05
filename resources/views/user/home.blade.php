@@ -259,6 +259,29 @@
 
 
 
+        <a class="scroll-top disabled" href="#"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+        <footer class="flex-shrink-0 section-text-white footer footer-links" >
+                
+            <div class="footer-copy">
+                <div class="container text-white-50"><strong>&copy; </strong>
+                  All rights reserved.</div>
+            </div>
+        </footer>
+        
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Paralax.js -->
+        <script src="/parallax.js/parallax.js"></script>
+        <!-- Waypoints -->
+        <script src="/waypoints/jquery.waypoints.min.js"></script>
+        <!-- Slick carousel -->
+        <script src="/slick/slick.min.js"></script>
+        <!-- Magnific Popup -->
+        <script src="/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!-- Inits product scripts -->
+        <script src="/js/script.js"></script>
   <a class="scroll-top disabled" href="#"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
   <footer class="flex-shrink-0 section-text-white footer footer-links">
 
