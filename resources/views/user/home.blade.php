@@ -158,7 +158,7 @@
         @foreach($Produk as $d)
         <div class="col-lg-3 col-md-6 portfolio-item filter-{{$d->nama_kategori}} "
           style="background-color:#222831;padding:0px;border-radius:30px;margin-left:30px;">
-          <img class="card-img-top" src="storage/img/uploads/{{$d->gambar_produks}}" alt="Card image"
+          <img class="card-img-top" src="{{ asset('uploads/' . $d->gambar_produks) }}" alt="Card image"
             style="border-radius:30px 30px 0px 50px">
           <div class="card-body" style="color:white;padding:30px;">
             <h4 class="card-title">{{$d->nama_produks}}</h4>

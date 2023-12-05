@@ -7,6 +7,7 @@ use App\Models\Produk;
 use App\Http\Requests\StoreProdukRequest;
 use App\Http\Requests\UpdateProdukRequest;
 use App\Models\ProdukKategory;
+use DateTime;
 use Illuminate\Support\Facades\File;
 
 class ProdukController extends Controller
@@ -63,8 +64,8 @@ class ProdukController extends Controller
 
         // upload gambar 
         $gambar = $request->file('gambar_produks');
-        $nama_gambar = rand() . '.' . $gambar->getClientOriginalExtension();
-        $gambar->storeAs('public/img/uploads', $nama_gambar);
+        $nama_gambar = date("YmdHis")  . '-' . $gambar->getClientOriginalName();
+        $gambar->move(base_path('public/uploads'), $nama_gambar);
 
         // simpan ke database
         $produk = new Produk;
@@ -134,10 +135,15 @@ class ProdukController extends Controller
         // dd($request);
         // memeriksa gambar yg di upload
         if ($request->hasFile('gambar_produks')) {
+            $oldImage = \public_path('uploads/') . $produk->gambar_produks;
+            if (File::exists($oldImage)) {
+                File::delete($oldImage);
+            }
+
             // upload gambar 
             $gambar = $request->file('gambar_produks');
-            $nama_gambar = rand() . '.' . $gambar->getClientOriginalExtension();
-            $gambar->storeAs('public/img/uploads', $nama_gambar);
+            $nama_gambar = date("YmdHis") . '-' . $gambar->getClientOriginalName();
+            $gambar->move(base_path('public/uploads'), $nama_gambar);
         } else {
             $nama_gambar = $produk->gambar_produks;
         }
@@ -175,7 +181,7 @@ class ProdukController extends Controller
 
         // Hapus file gambar dari folder jika ada
         if ($imageName) {
-            $imagePath = public_path('storage/img/uploads/') . $imageName;
+            $imagePath = public_path('uploads/') . $imageName;
 
             // Periksa apakah file gambar ada sebelum dihapus
             if (File::exists($imagePath)) {
