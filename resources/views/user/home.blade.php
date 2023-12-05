@@ -117,28 +117,28 @@
         </button>
         <div class="navbar-collapse">
           <ul class="navbar-nav">
-            <li class="nav-item">
-            </li>
+            
           </ul>
           <div class="navbar-extra">
             <a class="btn-theme btn" style="background-color: #395B64; border-radius: 15px"
               href="{{route('logout')}}">Logout</a>&nbsp;
 
-            <a type="button" class="btn-theme btn position-relative mr-3"
-              style="background-color: #395B64; border-radius: 15px;color:white;height:55px;padding-top:10px">
-              <h2><i class="bx bx-cart"></i></h2>
-              <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
-                10
-              </span>
-            </a>&nbsp;&nbsp;&nbsp;
+              <a type="button" class="btn-theme btn position-relative mr-3"
+                style="background-color: #395B64; border-radius: 15px; color: white; height: 55px; padding-top: 10px">
+                <h2><i class="bx bx-cart" style="font-size: 24px;"></i></h2>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
+                    0
+                </span></a>&nbsp;
+
+              <a class="btn-theme btn  ml-3 text-light" style="background-color: #395B64; border-radius: 15px"
+                  href="{{route('Home-user')}}">Kembali</a>
           </div>
         </div>
       </nav>
     </div>
   </header>
   <br><br><br>
-  <a class="btn-theme btn  ml-3 text-light" style="background-color: #395B64; border-radius: 15px"
-    href="{{route('Home-user')}}">Kembali</a>
+
   <h2 align="center">Our Menu</h2>
 
   <!-- ======= Portfolio Section ======= -->
