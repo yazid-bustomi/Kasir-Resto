@@ -27,4 +27,8 @@ class HomeController extends Controller
             'title' => "Login Menu"
         ]);
     }
+    public function logintest()
+    {
+        return view('auth.login-test');
+    }
 }
