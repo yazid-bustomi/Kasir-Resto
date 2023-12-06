@@ -59,8 +59,6 @@ Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 //rating
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->name('deleteRating');
-    return view('home');
-});
 
 // route u/ login page yang baru
 Route::get('/logintest', [HomeController::class, 'logintest'])->name('testlogin');
