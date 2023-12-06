@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'email' => 'manager@gmail.com',
             'password' => bcrypt('12345678'),
             'phone' => '080',
-            'role' => 'manajer'
+            'role' => 'manager'
         ]);
 
         $kasi = User::create([
@@ -45,9 +45,6 @@ class UserSeeder extends Seeder
             'password' => bcrypt('12345678'),
             'phone' => '080',
             'role' => 'client'
-        ]);
-        $this->call([
-            OrderSeeder::class
         ]);
     }
 }
