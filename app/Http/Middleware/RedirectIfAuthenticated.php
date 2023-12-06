@@ -19,6 +19,16 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
+        // if (Auth::user()->role !== $guards) {
+        //     if ($guards == 'user') {
+        //         return redirect('/dashboard');
+        //     } elseif ($guards == 'kasir') {
+        //         return redirect('/kasir');
+        //     } elseif ($guards == 'manager') {
+        //         return redirect('/manager');
+        //     }
+        // }
+
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {

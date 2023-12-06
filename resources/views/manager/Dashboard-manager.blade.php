@@ -33,7 +33,7 @@
                                 <div class="info-box-content">
                                     <span class="info-box-text">Total Client</span>
                                     <span class="info-box-number">
-                                        10
+                                        {{ $users->count() }}
                                         <small></small>
                                     </span>
                                 </div>
@@ -52,7 +52,7 @@
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Total Order</span>
-                                    <span class="info-box-number">41</span>
+                                    <span class="info-box-number">{{ $orders->count() }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -71,7 +71,7 @@
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Tota Produk</span>
-                                    <span class="info-box-number">760</span>
+                                    <span class="info-box-number">{{ $produks->count() }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -86,7 +86,7 @@
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Total Rating</span>
-                                    <span class="info-box-number">2,000</span>
+                                    <span class="info-box-number">{{ $ratings->count() }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
