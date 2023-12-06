@@ -16,8 +16,8 @@ class UserSeeder extends Seeder
     {
         // menambhkan data manajer
         $manajer=User::create([
-            'name' => 'manajer',
-            'email' => 'manajer@gmail.com',
+            'name' => 'manager',
+            'email' => 'manager@gmail.com',
             'password' => bcrypt('12345678'),
             'phone' => '080',
             'role' => 'manajer'

@@ -6,6 +6,7 @@ use index;
 use App\Models\Order;
 use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
+use App\Models\User;
 
 class OrderController extends Controller
 {
@@ -17,8 +18,8 @@ class OrderController extends Controller
     public function index()
     {
         // menampilkan list yang order
-        $orders = Order::all();
-        return view('order.index', ['orders' => $orders]); 
+        $orders = Order::with(['OrderDetail', 'User'])->get();
+        return view('order.index', compact('order')); 
     }
 
     /**
