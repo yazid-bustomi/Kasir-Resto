@@ -60,8 +60,15 @@ Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->name('deleteRating');
 
-// route u/ login page yang baru
-Route::get('/logintest', [HomeController::class, 'logintest'])->name('testlogin');
+
+Route::get('/', function () {
+    return view('home');
+    // return view('auth.login-test');
+});
+Route::get('/login-page', function () {
+    return view('auth.login-test');
+});
+
 
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::get('/Home-user', [UserController::class, 'home'])->name('Home-user');
