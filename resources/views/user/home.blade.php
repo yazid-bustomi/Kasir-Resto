@@ -117,28 +117,28 @@
         </button>
         <div class="navbar-collapse">
           <ul class="navbar-nav">
-            <li class="nav-item">
-            </li>
+            
           </ul>
           <div class="navbar-extra">
             <a class="btn-theme btn" style="background-color: #395B64; border-radius: 15px"
               href="{{route('logout')}}">Logout</a>&nbsp;
 
-            <a type="button" class="btn-theme btn position-relative mr-3"
-              style="background-color: #395B64; border-radius: 15px;color:white;height:55px;padding-top:10px">
-              <h2><i class="bx bx-cart"></i></h2>
-              <span class=" position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
-                10
-              </span>
-            </a>&nbsp;&nbsp;&nbsp;
+              <a type="button" class="btn-theme btn position-relative mr-3"
+                style="background-color: #395B64; border-radius: 15px; color: white; height: 55px; padding-top: 10px">
+                <h2><i class="bx bx-cart" style="font-size: 24px;"></i></h2>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-danger">
+                    0
+                </span></a>&nbsp;
+
+              <a class="btn-theme btn  ml-3 text-light" style="background-color: #395B64; border-radius: 15px"
+                  href="{{route('Home-user')}}">Kembali</a>
           </div>
         </div>
       </nav>
     </div>
   </header>
   <br><br><br>
-  <a class="btn-theme btn  ml-3 text-light" style="background-color: #395B64; border-radius: 15px"
-    href="{{route('Home-user')}}">Kembali</a>
+
   <h2 align="center">Our Menu</h2>
 
   <!-- ======= Portfolio Section ======= -->
@@ -262,6 +262,29 @@
 
 
 
+        <a class="scroll-top disabled" href="#"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+        <footer class="flex-shrink-0 section-text-white footer footer-links" >
+                
+            <div class="footer-copy">
+                <div class="container text-white-50"><strong>&copy; </strong>
+                  All rights reserved.</div>
+            </div>
+        </footer>
+        
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Paralax.js -->
+        <script src="/parallax.js/parallax.js"></script>
+        <!-- Waypoints -->
+        <script src="/waypoints/jquery.waypoints.min.js"></script>
+        <!-- Slick carousel -->
+        <script src="/slick/slick.min.js"></script>
+        <!-- Magnific Popup -->
+        <script src="/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!-- Inits product scripts -->
+        <script src="/js/script.js"></script>
   <a class="scroll-top disabled" href="#"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
   <footer class="flex-shrink-0 section-text-white footer footer-links">
 

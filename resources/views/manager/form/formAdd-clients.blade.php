@@ -73,7 +73,7 @@
                         <div class="col-sm-10">
                             <select name="role" id="">
                                 <option class="disable">Pilih Role </option>
-                                <option value="manajer">Manager</option>
+                                <option value="manager">Manager</option>
                                 <option value="kasir">kasir</option>
                                 <option value="client">Client</option>
                             </select>

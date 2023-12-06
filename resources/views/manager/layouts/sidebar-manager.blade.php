@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="position: fixed">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a class="brand-link">
         <h2 class="brand-text font-weight-light text-center font-weight-bold ">Restaurant </h2>
         <h4 class="text-center">Management</h4>
     </a>
