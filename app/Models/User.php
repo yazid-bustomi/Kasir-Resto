@@ -9,7 +9,9 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-
+    protected $primaryKey = 'id_users';
+    protected $guarded = ['id_users'];
+    protected $table = 'tbl_users';
     protected $fillable = [
         'name',
         'email',
@@ -18,14 +20,9 @@ class User extends Authenticatable
         'role',
 
     ];
-    protected $guarded = ['id_users'];
-
     protected $hidden = [
         'password',
     ];
-
-    // untuk membuat nama tabel di database supaya sesuai kriteria
-    // protected $table = 'tbl_users';
 
     // user bisa memiliki banya order
     public function order()
