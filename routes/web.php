@@ -45,11 +45,12 @@ Route::delete('/manager/delete_produk/{produk}', [ProdukController::class, 'dest
 
 
 Route::get('/', function () {
-    // return view('home');
     return view('home');
+    // return view('auth.login-test');
 });
-// route u/ login page yang baru
-Route::get('/logintest', [HomeController::class, 'logintest'])->name('testlogin');
+Route::get('/login-page', function () {
+    return view('auth.login-test');
+});
 
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::get('/Home-user', [UserController::class, 'home'])->name('Home-user');
