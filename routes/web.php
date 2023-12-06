@@ -25,9 +25,9 @@ use App\Http\Controllers\ExportController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 
-Auth::routes();
+// Auth::routes();
 // Route::get('/', function () {
 //     return view('home');
 // });
@@ -84,3 +84,7 @@ Route::get('/Home-user', [UserController::class, 'home'])->name('Home-user');
 Route::post('/add_cart', [App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

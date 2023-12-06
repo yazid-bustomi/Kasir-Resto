@@ -25,7 +25,7 @@ class User extends Authenticatable
     ];
 
     // untuk membuat nama tabel di database supaya sesuai kriteria
-    protected $table = 'tbl_users';
+    // protected $table = 'tbl_users';
 
     // user bisa memiliki banya order
     public function order()
