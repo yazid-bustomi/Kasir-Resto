@@ -12,6 +12,7 @@ use App\Http\Controllers\RatingController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\Auth\UserControllers;
+use App\Http\Controllers\ExportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,10 @@ Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 //rating
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->name('deleteRating');
+
+//export
+
+Route::get('/export', [ExportController::class, 'index'])->name('export.index');
 
 
 Route::get('/', function () {
