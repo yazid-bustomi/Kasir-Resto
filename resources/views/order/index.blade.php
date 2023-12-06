@@ -42,6 +42,8 @@
             <div class="container">
                 {{-- this cozntent --}}
                 <a class="btn btn-info mb-3" href="{{ route('manager.index') }}"><i class="fa fa-arrow-left"></i></a>
+                <a class="btn btn-dark mb-3" href="{{ route('export.index') }}">Export Data</a>
+
                 <table class="table table-hover" id="data-tabel">
                     <thead>
                         <tr>

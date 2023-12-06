@@ -12,6 +12,7 @@ use App\Http\Controllers\RatingController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\Auth\UserControllers;
+use App\Http\Controllers\ExportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +25,9 @@ use App\Http\Controllers\Auth\UserControllers;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 
-Auth::routes();
+// Auth::routes();
 // Route::get('/', function () {
 //     return view('home');
 // });
@@ -61,6 +62,10 @@ Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->name('deleteRating');
 
+//export
+
+Route::get('/export', [ExportController::class, 'index'])->name('export.index');
+
 
 Route::get('/', function () {
     // return view('home');
@@ -79,3 +84,7 @@ Route::get('/Home-user', [UserController::class, 'home'])->name('Home-user');
 Route::post('/add_cart', [App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
