@@ -24,6 +24,7 @@ class ProdukController extends Controller
         return view('manager.data-products', [
             'produks' => $produks,
             'kategori' => $kategori,
+            'title' => 'Data produk'
         ]);
     }
 
@@ -39,6 +40,7 @@ class ProdukController extends Controller
 
         return view('manager.form.formTambahproduk', [
             'kategori' => $produk_kategori,
+            'title' => 'Form tambah Produk',
         ]);
     }
 
@@ -108,7 +110,8 @@ class ProdukController extends Controller
         $produk = Produk::find($id_produks);
         return view('manager.form.formedit-product', [
             'produks' => $produk,
-            'kategories' => $kategori
+            'kategories' => $kategori,
+            'titlwe' => 'Form Update'
         ]);
     }
 

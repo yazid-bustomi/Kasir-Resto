@@ -23,10 +23,14 @@ class ManagerController extends Controller
     {
         $usres = User::all();
         return view('manager.data-clients', compact('users'));
+
     }
+
     public function dataCashiers()
     {
-        return view('manager.data-cashiers');
+        return view('manager.data-cashiers', [
+            'title' => 'Data Cashier',
+        ]);
     }
 
     public function dataProducts()
@@ -37,11 +41,7 @@ class ManagerController extends Controller
         return view('manager.data-products', [
             'produks' => $produk,
             'kategori' => $kategori,
+            'title' => 'Data Produk'
         ]);
-    }
-
-    public function reports()
-    {
-        return view('manager.reports');
     }
 }

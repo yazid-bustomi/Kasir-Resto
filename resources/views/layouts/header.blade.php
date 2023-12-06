@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{ asset ('img/resto.png') }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ $title }}</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"

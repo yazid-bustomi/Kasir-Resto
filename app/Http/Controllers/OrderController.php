@@ -17,9 +17,16 @@ class OrderController extends Controller
      */
     public function index()
     {
-        // menampilkan list yang order
-        $orders = Order::with(['OrderDetail', 'User'])->get();
-        return view('order.index', compact('order')); 
+        // menampilkan list yang order dari users yang login
+        // $orders = Order::with(['OrderDetail', 'User'])->get();
+        // return view('order.index', compact('order')); 
+      
+      
+        $orders = Order::all();
+        return view('order.index', [
+            'orders' => $orders,
+            'title' => 'Data Order'
+        ]);
     }
 
     /**
