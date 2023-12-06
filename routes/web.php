@@ -24,6 +24,7 @@ use App\Http\Controllers\ExportController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', [HomeController::class, 'index']);
 
 Auth::routes();
@@ -45,13 +46,13 @@ Route::post('/client/store', [ClientController::class, 'store'])->name('add-clie
 Route::get('/client/{clients}/edit', [ClientController::class, 'edit'])->name('formEdit-clients');
 Route::post('/client/{clients}/update', [ClientController::class, 'update'])->name('update-clients');
 Route::get('/manager/delete/{clients}', [ClientController::class, 'destroy'])->name('delete-clients');
-  
+
 // CRUD produk
 Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formTambah-produk');
 Route::post('/manager/store', [ProdukController::class, 'store'])->name('produk-store');
 Route::get('/manager/{produk}/edit', [ProdukController::class, 'edit'])->name('formEdit-produk');
 Route::post('/manager/{produk}/update', [ProdukController::class, 'update'])->name('update-produk');
-Route::delete('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete-produk');
+Route::get('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete-produk');
 
 //route kasir
 Route::get('/order', [OrderController::class, 'index'])->name('order.index');
@@ -67,12 +68,15 @@ Route::get('/export', [ExportController::class, 'index'])->name('export.index');
 
 
 Route::get('/', function () {
+    // return view('home');
     return view('home');
-    // return view('auth.login-test');
 });
 Route::get('/login-page', function () {
+    // return view('home');
     return view('auth.login-test');
 });
+// route u/ login page yang baru
+Route::get('/logintest', [HomeController::class, 'logintest'])->name('testlogin');
 
 
 Route::get('/user', [UserController::class, 'index'])->name('user');
