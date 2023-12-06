@@ -100,15 +100,11 @@ window.location = url;
                                     href="{{ route('formEdit-produk', $row->id_produks) }}"><i
                                         class="fa fa-edit small"></i>
                                 </a>
-                                <form id="deleteForm" action="{{ route('delete-produk', $row->id_produks) }}"
-                                    method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-outline-danger btn-sm mb-1"
-                                        onclick="return confirm('Apakah Anda Yakin ?')">
-                                        <i class=" fa fa-trash"></i>
-                                    </button>
-                                </form>
+                                <a class="btn btn-outline-danger btn-sm mb-1 "
+                                    onclick="return confirm('Apakah anda yakin ?')"
+                                    href="{{ route('delete-produk', $row->id_produks) }}"><i class="fa fa-trash"></i>
+                                </a>
+
 
                             </td>
                         </tr>
