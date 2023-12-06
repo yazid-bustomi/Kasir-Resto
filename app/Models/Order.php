@@ -13,7 +13,7 @@ class Order extends Model
     protected $table = 'tbl_orders';
 
     // order hanya di miliki 1 user saja
-    public function user(){
+    public function User(){
         return $this->belongsTo(User::class);
     }
     public function OrderDetail(){
