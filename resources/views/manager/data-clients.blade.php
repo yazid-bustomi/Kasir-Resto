@@ -43,7 +43,8 @@
             <div class="container">
                 {{-- this content --}}
                 <a class="btn btn-info mb-3" href="{{ route('manager.index') }}"><i class="fa fa-arrow-left"></i></a>
-                <a class="btn btn-info mb-3" href="{{ route('form') }}"><i class="fa-solid fa-circle-plus"></i> Data
+                <a class="btn btn-info mb-3" href="{{ route('form-client') }}"><i class="fa-solid fa-circle-plus"></i>
+                    Data
                     Client's</a>
                 <table class="table table-hover" id="data-tabel">
                     <thead>
@@ -67,12 +68,12 @@
 
                             <td class="text-center">
                                 <a class="btn btn-outline-success btn-sm mb-1 "
-                                    href="{{ route('formEdit-clients', $row->id_users) }}"><i
+                                    href="{{ route('formEdit-client', $row->id_users) }}"><i
                                         class="fa fa-edit small"></i>
                                 </a>
                                 <a class="btn btn-outline-danger btn-sm mb-1 "
-                                    href="{{ route('delete-clients', $row->id_users) }}">
-                                    <i class=" fa fa-trash"></i>
+                                    onclick="return confirm('Apakah anda yakin ?')"
+                                    href="{{ route('delete-clients', $row->id_users) }}"><i class="fa fa-trash"></i>
                                 </a>
 
                             </td>

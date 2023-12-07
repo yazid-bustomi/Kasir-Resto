@@ -142,9 +142,31 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        // produk validasi
+        'kode_produks' => [
+            'required' => ':attribute harus diisi',
         ],
+        'nama_produks' => [
+            'required' => ':attribute harus diisi',
+        ],
+        'kategori_produks' => [
+            'required' => 'pilih :attribute dulu',
+        ],
+        'harga_produks' => [
+            'required' => ':attribute harus diisi',
+        ],
+        'stok_produks' => [
+            'required' => 'Masukan :attribute',
+        ],
+        'gambar_produks' => [
+            'required' => 'pilih :attribute terlebih dahulu',
+            'image' => 'File yang dipilih bukan gambar',
+            'mimes' => 'Format file tidak sesuai, gunakan format jpeg,png,jpg,gif',
+            'max' => 'Ukuran :attribute maksimal 2mb',
+        ],
+        'deskripsi_produks' => [
+            'required' => 'Isi :attribute',
+        ]
     ],
 
     /*
@@ -158,6 +180,15 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        // produk validasis
+        'kode_produks' => 'Kode Produk',
+        'nama_produks' => 'Nama Produk',
+        'kategori_produks' => 'Kategori Produk',
+        'harga_produks' => 'Harga Produk',
+        'stok_produks' => 'Stok Produk',
+        'gambar_produks' => 'Gambar Produk',
+        'deskripsi_produks' => 'Deskripsi Produk',
+    ],
 
 ];

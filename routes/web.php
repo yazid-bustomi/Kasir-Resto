@@ -12,6 +12,7 @@ use App\Http\Controllers\RatingController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\Auth\UserControllers;
+use App\Http\Controllers\ExportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +24,10 @@ use App\Http\Controllers\Auth\UserControllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [HomeController::class, 'index']);
 
-Auth::routes();
+// Route::get('/', [HomeController::class, 'index']);
+
+// Auth::routes();
 // Route::get('/', function () {
 //     return view('home');
 // });
@@ -39,18 +41,18 @@ Route::get('/manager/data-products', [ProdukController::class, 'index'])->name('
 
 // CRUD user
 Route::get('/manager/data-clients', [ClientController::class, 'index'])->name('data.clients');
-Route::get('/client/formAdd', [ClientController::class, 'create'])->name('form');
+Route::get('/client/formAdd', [ClientController::class, 'create'])->name('form-client');
 Route::post('/client/store', [ClientController::class, 'store'])->name('add-clients');
-Route::get('/client/{clients}/edit', [ClientController::class, 'edit'])->name('formEdit-clients');
+Route::get('/manager/edit/{clients}', [ClientController::class, 'edit'])->name('formEdit-client');
 Route::post('/client/{clients}/update', [ClientController::class, 'update'])->name('update-clients');
-Route::get('/manager/delete/{clients}', [ClientController::class, 'destroy'])->name('delete-clients');
-  
+Route::get('/manager/delete/{users}', [ClientController::class, 'destroy'])->name('delete-clients');
+
 // CRUD produk
 Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formTambah-produk');
 Route::post('/manager/store', [ProdukController::class, 'store'])->name('produk-store');
 Route::get('/manager/{produk}/edit', [ProdukController::class, 'edit'])->name('formEdit-produk');
 Route::post('/manager/{produk}/update', [ProdukController::class, 'update'])->name('update-produk');
-Route::delete('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete-produk');
+Route::get('/manager/delete_produk/{produk}', [ProdukController::class, 'destroy'])->name('delete-produk');
 
 //route kasir
 Route::get('/order', [OrderController::class, 'index'])->name('order.index');
@@ -60,14 +62,21 @@ Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/rating/{rating}/delete', [RatingController::class, 'destroy'])->name('deleteRating');
 
+//export
+
+Route::get('/export', [ExportController::class, 'index'])->name('export.index');
+
 
 Route::get('/', function () {
+    // return view('home');
     return view('home');
-    // return view('auth.login-test');
 });
 Route::get('/login-page', function () {
+    // return view('home');
     return view('auth.login-test');
 });
+// route u/ login page yang baru
+Route::get('/logintest', [HomeController::class, 'logintest'])->name('testlogin');
 
 
 Route::get('/user', [UserController::class, 'index'])->name('user');
@@ -75,3 +84,7 @@ Route::get('/Home-user', [UserController::class, 'home'])->name('Home-user');
 Route::post('/add_cart', [App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -13,26 +13,6 @@
     $(function() {
             $('#data-tabel').DataTable();
         });
-confirmDelete = function(button) {
-var url = $(button).data('url');
-swal({
-'title': 'Hati-Hati !',
-'icon': 'warning',
-'text': 'Apakah Kamu Yakin Ingin Menghapus Data Ini?',
-'dangermode': true,
-'buttons': true
-}).then(function(value) {
-if (value) {
-swal({
-'title': "Good job!",
-'text': "Data Terhapus",
-'icon': "success",
-'button': "Aww yiss!",
-});
-window.location = url;
-}
-});
-}
 </script>
 
 
@@ -100,15 +80,11 @@ window.location = url;
                                     href="{{ route('formEdit-produk', $row->id_produks) }}"><i
                                         class="fa fa-edit small"></i>
                                 </a>
-                                <form id="deleteForm" action="{{ route('delete-produk', $row->id_produks) }}"
-                                    method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-outline-danger btn-sm mb-1"
-                                        onclick="return confirm('Apakah Anda Yakin ?')">
-                                        <i class=" fa fa-trash"></i>
-                                    </button>
-                                </form>
+                                <a class="btn btn-outline-danger btn-sm mb-1 "
+                                    onclick="return confirm('Apakah anda yakin ?')"
+                                    href="{{ route('delete-produk', $row->id_produks) }}"><i class="fa fa-trash"></i>
+                                </a>
+
 
                             </td>
                         </tr>
@@ -117,7 +93,7 @@ window.location = url;
                 </table>
                 <div class="small">
                     <i>
-                        Keterangan kategori produk:
+                        {{ __('Keterangan kategori produk:') }}
                         <span>
                             @foreach ($kategori as $item)
                             <small class="small text-bold">{{ $item->id_produk_kategories }}. {{
