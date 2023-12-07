@@ -25,9 +25,9 @@ use App\Http\Controllers\ExportController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 
-Auth::routes();
+// Auth::routes();
 // Route::get('/', function () {
 //     return view('home');
 // });
@@ -41,11 +41,11 @@ Route::get('/manager/data-products', [ProdukController::class, 'index'])->name('
 
 // CRUD user
 Route::get('/manager/data-clients', [ClientController::class, 'index'])->name('data.clients');
-Route::get('/client/formAdd', [ClientController::class, 'create'])->name('form');
+Route::get('/client/formAdd', [ClientController::class, 'create'])->name('form-client');
 Route::post('/client/store', [ClientController::class, 'store'])->name('add-clients');
-Route::get('/client/{clients}/edit', [ClientController::class, 'edit'])->name('formEdit-clients');
+Route::get('/manager/edit/{clients}', [ClientController::class, 'edit'])->name('formEdit-client');
 Route::post('/client/{clients}/update', [ClientController::class, 'update'])->name('update-clients');
-Route::get('/manager/delete/{clients}', [ClientController::class, 'destroy'])->name('delete-clients');
+Route::get('/manager/delete/{users}', [ClientController::class, 'destroy'])->name('delete-clients');
 
 // CRUD produk
 Route::get('/manager/formAdd', [ProdukController::class, 'create'])->name('formTambah-produk');
@@ -84,3 +84,7 @@ Route::get('/Home-user', [UserController::class, 'home'])->name('Home-user');
 Route::post('/add_cart', [App\Http\Controllers\Auth\UserController::class, 'add_cart'])->name('add_cart');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

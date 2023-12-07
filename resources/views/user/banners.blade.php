@@ -66,10 +66,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h1 class="text-center judul text-light ">Selamat Datang di Website Kami!</h1><br />
+                        <h1 class="text-center judul text-light ">{{ __('Selamat Datang di Website Kami!') }}</h1><br />
 
-                        <h1 class="text-center link text-light"><a href="{{ route('user') }}" class="text-light">Lihat
-                                Menu <i class="fa-solid fa-angles-right"></i></a>
+                        <h1 class="text-center link text-light"><a href="{{ route('user') }}" class="text-light">{{
+                                __('Lihat menu') }}<i class="fa-solid fa-angles-right"></i></a>
                         </h1>
                         <br />
                     </div>
