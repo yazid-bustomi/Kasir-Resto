@@ -16,7 +16,7 @@ class RatingSeeder extends Seeder
     {
         //data dummy
         $rating=Rating::create([
-            'review_id' => 6,
+            'id_ratings' => 6,
             'user_name' => 'John Smith',
             'user_rating' => 4,
             'user_review' => 'Nice Product, Value for money',

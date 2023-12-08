@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             ProdukKategorySeeder::class,
             ProdukSeeder::class,
             OrderSeeder::class,
+            RatingSeeder::class
         ]);
     }
 }

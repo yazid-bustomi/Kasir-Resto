@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\QueryException;
+use App\Http\Requests\UpdateClientRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -30,7 +32,7 @@ class ClientController extends Controller
     public function create()
     {
         //
-        return view('manager.form.formAdd-clients', [
+        return view('manager.form.member.formAdd-clients', [
             'title' => 'Tambah Data Client',
         ]);
     }
@@ -47,7 +49,7 @@ class ClientController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|unique:tbl_users,email',
-            'password' => 'required',
+            'password' => 'required|min:6',
             'phone' => 'required',
             'role' => 'required|max:50',
 
@@ -69,10 +71,10 @@ class ClientController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     *@param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_users)
     {
         //
     }
@@ -80,34 +82,72 @@ class ClientController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     *  @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_users)
     {
         //
+        $user = User::find($id_users);
+        return \view('manager.form.member.formedit-client', [
+            'title' => 'Form tambah data clients',
+            'user' => $user,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     *  @param  \App\Http\Requests\UpdateClientRequest  $request
+     *@param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateClientRequest $request, User $user)
     {
-        //
+        // Validasi data yang diterima dari formulir
+        $request->validate([
+            'name' => 'required',
+            'password' => 'required|min:6',
+            'phone' => 'required',
+            'role' => 'required|max:50',
+        ]);
+
+        // cek keberadaan email di database
+        if ($request->has('email')) {
+            // Hapus email pengguna jika ada
+            try {
+                User::where('email', $request->email)->delete();
+            } catch (QueryException $e) {
+                return redirect()->back()->with('failed', 'Gagal menghapus email .');
+            }
+            // simpan email yg telah d perbaharui ke db
+            $user->email = $request->email;
+        }
+        // simpan ke db
+        $user->name = $request->name;
+        $user->password = bcrypt($request->password);
+        $user->phone = $request->phone;
+        $user->role = $request->role;
+
+        // Simpan perubahan ke dalam database
+        if ($user->save()) {
+            return redirect()->route('data.clients')->with('success', 'Data User telah diperbarui');
+        } else {
+            return redirect()->back()->with('failed', 'Gagal memperbarui Data User');
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     *@param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
         //
+        $user->delete();
+
+        return \redirect()->route('data.clients')->with('success', 'Data Berhasil di Hapus');
     }
 }
