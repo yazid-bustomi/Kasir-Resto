@@ -107,16 +107,6 @@ Ensure you have the following installed on your local machine:
 
 ---
 
-## 🤝 Collaboration & Internship
-
-This project was developed collaboratively during an internship program to solve real-world restaurant management problems using modern web technologies. 
-
-**Developers:**
-- **[Ajeng]** - *Fullstack Developer / UI/UX*
-- **[Yazid Bustomi]** - *Fullstack Developer* - [bustom1](https://github.com/bustom1)
-
----
-
 ## 📄 License
 
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
