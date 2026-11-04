@@ -107,21 +107,6 @@ Ensure you have the following installed on your local machine:
 
 ---
 
-## 📸 Screenshots
-
-*(To make this README even more professional, you can add screenshots of your application here. For example: Dashboard, POS Screen, Product List. Save your images in a `public/assets/img/` folder and link them below)*
-
-<details>
-<summary>Click to view screenshots placeholders</summary>
-
-| Dashboard Manager | Point of Sale (Cashier) |
-| :---: | :---: |
-| <img src="https://via.placeholder.com/600x350.png?text=Dashboard+Manager" alt="Dashboard" width="100%"> | <img src="https://via.placeholder.com/600x350.png?text=POS+System" alt="POS" width="100%"> |
-
-</details>
-
----
-
 ## 🤝 Collaboration & Internship
 
 This project was developed collaboratively during an internship program to solve real-world restaurant management problems using modern web technologies. 
